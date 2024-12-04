@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>KURIRMOO</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="KURIRMOO" name="keywords" />
+  <meta content="KURIRMOO" name="description" />
+
+  <!-- Favicon -->
+  <link href="img/logo-kurirmoo.png" rel="icon" />
+
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    .market-btn {
+      display: inline-block;
+      padding: 0.3125rem 0.875rem;
+      padding-left: 2.8125rem;
+      -webkit-transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+      transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+      border: 1px solid #e7e7e7;
+      background-position: center left 0.75rem;
+      background-color: #fff;
+      background-size: 1.5rem 1.5rem;
+      background-repeat: no-repeat;
+      text-decoration: none;
+    }
+
+    .market-btn .market-button-title {
+      display: block;
+      color: #222;
+      font-size: 1.125rem;
+    }
+
+    .market-btn .market-button-subtitle {
+      display: block;
+      margin-bottom: -0.25rem;
+      color: #888;
+      font-size: 0.75rem;
+    }
+
+    .market-btn:hover {
+      background-color: #f7f7f7;
+      text-decoration: none;
+    }
+
+    .apple-btn {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDUgMzA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDUgMzA1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnIGlkPSJYTUxJRF8yMjhfIj4KCTxwYXRoIGlkPSJYTUxJRF8yMjlfIiBkPSJNNDAuNzM4LDExMi4xMTljLTI1Ljc4NSw0NC43NDUtOS4zOTMsMTEyLjY0OCwxOS4xMjEsMTUzLjgyQzc0LjA5MiwyODYuNTIzLDg4LjUwMiwzMDUsMTA4LjIzOSwzMDUgICBjMC4zNzIsMCwwLjc0NS0wLjAwNywxLjEyNy0wLjAyMmM5LjI3My0wLjM3LDE1Ljk3NC0zLjIyNSwyMi40NTMtNS45ODRjNy4yNzQtMy4xLDE0Ljc5Ny02LjMwNSwyNi41OTctNi4zMDUgICBjMTEuMjI2LDAsMTguMzksMy4xMDEsMjUuMzE4LDYuMDk5YzYuODI4LDIuOTU0LDEzLjg2MSw2LjAxLDI0LjI1Myw1LjgxNWMyMi4yMzItMC40MTQsMzUuODgyLTIwLjM1Miw0Ny45MjUtMzcuOTQxICAgYzEyLjU2Ny0xOC4zNjUsMTguODcxLTM2LjE5NiwyMC45OTgtNDMuMDFsMC4wODYtMC4yNzFjMC40MDUtMS4yMTEtMC4xNjctMi41MzMtMS4zMjgtMy4wNjZjLTAuMDMyLTAuMDE1LTAuMTUtMC4wNjQtMC4xODMtMC4wNzggICBjLTMuOTE1LTEuNjAxLTM4LjI1Ny0xNi44MzYtMzguNjE4LTU4LjM2Yy0wLjMzNS0zMy43MzYsMjUuNzYzLTUxLjYwMSwzMC45OTctNTQuODM5bDAuMjQ0LTAuMTUyICAgYzAuNTY3LTAuMzY1LDAuOTYyLTAuOTQ0LDEuMDk2LTEuNjA2YzAuMTM0LTAuNjYxLTAuMDA2LTEuMzQ5LTAuMzg2LTEuOTA1Yy0xOC4wMTQtMjYuMzYyLTQ1LjYyNC0zMC4zMzUtNTYuNzQtMzAuODEzICAgYy0xLjYxMy0wLjE2MS0zLjI3OC0wLjI0Mi00Ljk1LTAuMjQyYy0xMy4wNTYsMC0yNS41NjMsNC45MzEtMzUuNjExLDguODkzYy02LjkzNiwyLjczNS0xMi45MjcsNS4wOTctMTcuMDU5LDUuMDk3ICAgYy00LjY0MywwLTEwLjY2OC0yLjM5MS0xNy42NDUtNS4xNTljLTkuMzMtMy43MDMtMTkuOTA1LTcuODk5LTMxLjEtNy44OTljLTAuMjY3LDAtMC41MywwLjAwMy0wLjc4OSwwLjAwOCAgIEM3OC44OTQsNzMuNjQzLDU0LjI5OCw4OC41MzUsNDAuNzM4LDExMi4xMTl6IiBmaWxsPSIjMmUyZTJlIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjMwXyIgZD0iTTIxMi4xMDEsMC4wMDJjLTE1Ljc2MywwLjY0Mi0zNC42NzIsMTAuMzQ1LTQ1Ljk3NCwyMy41ODNjLTkuNjA1LDExLjEyNy0xOC45ODgsMjkuNjc5LTE2LjUxNiw0OC4zNzkgICBjMC4xNTUsMS4xNywxLjEwNywyLjA3MywyLjI4NCwyLjE2NGMxLjA2NCwwLjA4MywyLjE1LDAuMTI1LDMuMjMyLDAuMTI2YzE1LjQxMywwLDMyLjA0LTguNTI3LDQzLjM5NS0yMi4yNTcgICBjMTEuOTUxLTE0LjQ5OCwxNy45OTQtMzMuMTA0LDE2LjE2Ni00OS43N0MyMTQuNTQ0LDAuOTIxLDIxMy4zOTUtMC4wNDksMjEyLjEwMSwwLjAwMnoiIGZpbGw9IiMyZTJlMmUiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    }
+
+    .google-btn {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPHBvbHlnb24gc3R5bGU9ImZpbGw6IzVDREFERDsiIHBvaW50cz0iMjkuNTMsMCAyOS41MywyNTEuNTA5IDI5LjUzLDUxMiAyOTkuMDA0LDI1MS41MDkgIi8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNCREVDQzQ7IiBwb2ludHM9IjM2OS4wNjcsMTgwLjU0NyAyNjIuMTc1LDExOS40NjcgMjkuNTMsMCAyOTkuMDA0LDI1MS41MDkgIi8+Cjxwb2x5Z29uIHN0eWxlPSJmaWxsOiNEQzY4QTE7IiBwb2ludHM9IjI5LjUzLDUxMiAyOS41Myw1MTIgMjYyLjE3NSwzODMuNTUxIDM2OS4wNjcsMzIyLjQ3IDI5OS4wMDQsMjUxLjUwOSAiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0ZGQ0E5NjsiIGQ9Ik0zNjkuMDY3LDE4MC41NDdsLTcwLjA2Myw3MC45NjFsNzAuMDYzLDcwLjk2MWwxMDguNjg4LTYyLjg3N2M2LjI4OC0zLjU5Myw2LjI4OC0xMS42NzcsMC0xNS4yNyAgTDM2OS4wNjcsMTgwLjU0N3oiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    }
+
+    .windows-btn {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDQ4MCA0ODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4MCA0ODA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMC4xNzYsMjI0TDAuMDAxLDY3Ljk2M2wxOTItMjYuMDcyVjIyNEgwLjE3NnogTTIyNC4wMDEsMzcuMjQxTDQ3OS45MzcsMHYyMjRIMjI0LjAwMVYzNy4yNDF6IE00NzkuOTk5LDI1NmwtMC4wNjIsMjI0ICAgbC0yNTUuOTM2LTM2LjAwOFYyNTZINDc5Ljk5OXogTTE5Mi4wMDEsNDM5LjkxOEwwLjE1Nyw0MTMuNjIxTDAuMTQ3LDI1NmgxOTEuODU0VjQzOS45MTh6IiBmaWxsPSIjMDBiY2YyIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    }
+
+    .amazon-btn {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0idXVpZDo1RDIwODkyNDkzQkZEQjExOTE0QTg1OTBEMzE1MDhDOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGQUJGNjhGNDRGNkMxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGQUJGNjhGMzRGNkMxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QUM1ODJFMkIxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QUM1ODJFM0IxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgNXCVIAAAc7SURBVHja5FwJbFRVFH0tQimgUCiubKJCWWSwKIooVhG3aESkETRqBEEEEURExBXiVhElkRiIEFwTQEHciQiIMQhFkUGFihErIJjWUgg0LFXqPf4z9jvMTOe/v9ebnEw78+//b85/y7n33T8ZNTU1yo5FIhEdtxMEXQRtBGcLOglO5ftoUKagSrBLUCLYKCgVbBEcNJ8oGo0qN+045Z2dJCgU9BdcJ2igcY4DgsWC9wTvetHoTA+u0ZlfCL3hJcFATXJgzQS3C5YIKgWT3G58hotDDMNlvmCQy9+hAj1ThtqqMPWgywXlHpADayVYKTfq0bAQdJ9guaCR8tamCUlPBZ2gcYIXlH82RUgaFlSCCgQzlf82T0hqFzSCGgreUsGxqUEj6BkKvaBYofSi5kERihCAE2z4rxYs4qp3WNBY0F0wVtBC85xNKUrnBoGgUdBTGn4IH24UbEvwGQh7TDBdMNGGQA3EELtGw2eh4Jwk5JjtAcFDmu0633clLeMcweYOi24IOLta9CnR6BF/CE4Whf2Xnz3oKg2fJzR8PtTwyaXK9nWIHbF4PFIYn2hcZ6Vm+5r4SpB039c5T5RwqO0VHE3hgoByv8alSm3oM99XsecJxSUaUXyOoKPgTOIMEjdK8xrVYSbIbIeIMsGPDp43Q/lkmap+W0bQepDTliU43oam+bM+EIT5qZcyEve5nL9aCtpzHmtq49zVYSOoraCv4AZBHgPc3P/7EOsgGCoYzt4SKnOTIAyZGYJrwzzLu0XQi4Lx9WEZdJqg0wVfqmAlzwJDUB/BmvompJwiqLND5FQwXtuujJ3TA1TlmM8eDytB2P9absMfaVbshryN+DeJuDsrzATNor7RMezV3xvkWMwWQZFIpIe8jNB0v0kZuedAm91gdaSm31iL5NSEjiDuO92h4bqGwzIUMaOdHnSe0ktpztfwaRwqgqT3QAheqHnNZZoyIlQ9COT00/BDzrpcwy9fs51ZfhEEXdJRw+8AdY9XBPm2q4HyklM0/HRqE7H3f4mN2NAXgrKUXgUZihGsVl0Mt7GKDfKLIAyTIxp+2cqoj7bSeybb+H5DZEE5zQ+CsEn4u6avlb2x2cpI2tuxiX4Q9JOquzIjmaHOuXcax6H0ZaADK/V46UW9vCYIavgLG43+XHBRks9QLP6B3TsfZ6/pOmqXv8hdGSAvn9psOIiap4zcD5bkQsINQ+agKBqN/uZVjFOsjAdLsm2co4DwwhAgY5/sfk9iMbkT++TlVRUus7zTajfdMcvjL7hEWa9oi9llclMf9JQgueBmVVv64rY9p4yiz9kW/VC01U33YRcnqjtQQLXWZXIeFsTu/tOC9Wn6oR6yPW+kljmViOrDRp/rMDEourpeHVujiJ60VaXOEy0TYq72K9RIZEigLXbwfNBZJ6rEBZw7Uugo2CtOkOM0QbDBmAyVveqybwUDGMFXpDjuG5W4bmiKkDPSqS/0r1A8PEfvAZneL+ck+wgJNVR1RIhEuRkEvHhUcyNJhWwosdgElNEsYGA7pnh05ZI0fJARRSF7W8Z6hxhbQtv9+k+64q7tx8xBmEca2gwh4odIMYce5qaWJKkBswEQbfvZIPSGn1XqCtnEanV0ZYncpNHKKLz6uI7DeyojGwr0IlHZvFEoPF/H6AAPDO+J70GLKPNxwC10qC92heBJ3qx0rEh60OT4HnQrleZQ3s1xIVTKiexKVbtRUEEgL76XqyBSx/GZx6aJlnl0+5s5JlH0hO2Z25i/2RpigjaRgHKKxkTWjcMrRsy+VKsYHvp/n39fyskTlWKtQ0rQbmVU6lelOOYHwXem/0vrWuYhzpaa/p9A7TFJ+biJ55BlUZVv4nSiuHDE6icxOa9KRwehEnVu3ImLBDuV8Qhm85AR04TtRvufVcZvhtzNz9qYRshazsFpCUVUbsTX5eARI8zwSDwh2ZUfcGIwv8yh3kK7c00TdkxQ9jcdP9Oqkp7GSbsqwUw/jBpmC4dh94CQAvF4D1X59ySieZwK72wSpbGNhF9UXDFYusHqR7woqsAuSNKgGSaBCE21QfCVh6REGHoMZqiSzCBdzFUpOaYg+0470fxOqu0pglQ/AdFP1e7bl/IubuHEt07pPS8Wbw05tLHK9mDYkFeHTzV7/Jtx76PCLYOB9kqnYrF8jtWLLX4xSPrNXHrLuWJgQizj31Uc9kd58zBf4PmzTozsWzPm6mJxkXiHwndX3PvNTOFOh/8sdQliMSu2gb1kiDJ+qyPdffpGjId6ejTs0HORrF+R5PNWXKnHuJXuWMCAD3tY21Rw7GtGAV1TkKPYc0aoFNvoTuWDZlBoTWLj/LIV7NUISt8IYsJsOhtXoIxk/l4PSNlMZYzJGj/stNDJk7tVHLmaeIQTeV9qqTxOjHasjAm2pZwL17nJvtvVo8gQfEZMZXKqHXVHPlekFswgNFK1JXPwO8gVZg/lwnpKht1ejtm/BRgAKCaVSdcawG4AAAAASUVORK5CYII=);
+    }
+
+    .market-btn-light {
+      border-color: rgba(255, 255, 255, 0.14);
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .market-btn-light .market-button-title {
+      color: #fff;
+    }
+
+    .market-btn-light .market-button-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .market-btn-light:hover {
+      background-color: rgba(255, 255, 255, 0.06);
+    }
+
+    .market-btn-light.apple-btn {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMDUgMzA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMDUgMzA1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnIGlkPSJYTUxJRF8yMjhfIj4KCTxwYXRoIGlkPSJYTUxJRF8yMjlfIiBkPSJNNDAuNzM4LDExMi4xMTljLTI1Ljc4NSw0NC43NDUtOS4zOTMsMTEyLjY0OCwxOS4xMjEsMTUzLjgyQzc0LjA5MiwyODYuNTIzLDg4LjUwMiwzMDUsMTA4LjIzOSwzMDUgICBjMC4zNzIsMCwwLjc0NS0wLjAwNywxLjEyNy0wLjAyMmM5LjI3My0wLjM3LDE1Ljk3NC0zLjIyNSwyMi40NTMtNS45ODRjNy4yNzQtMy4xLDE0Ljc5Ny02LjMwNSwyNi41OTctNi4zMDUgICBjMTEuMjI2LDAsMTguMzksMy4xMDEsMjUuMzE4LDYuMDk5YzYuODI4LDIuOTU0LDEzLjg2MSw2LjAxLDI0LjI1Myw1LjgxNWMyMi4yMzItMC40MTQsMzUuODgyLTIwLjM1Miw0Ny45MjUtMzcuOTQxICAgYzEyLjU2Ny0xOC4zNjUsMTguODcxLTM2LjE5NiwyMC45OTgtNDMuMDFsMC4wODYtMC4yNzFjMC40MDUtMS4yMTEtMC4xNjctMi41MzMtMS4zMjgtMy4wNjZjLTAuMDMyLTAuMDE1LTAuMTUtMC4wNjQtMC4xODMtMC4wNzggICBjLTMuOTE1LTEuNjAxLTM4LjI1Ny0xNi44MzYtMzguNjE4LTU4LjM2Yy0wLjMzNS0zMy43MzYsMjUuNzYzLTUxLjYwMSwzMC45OTctNTQuODM5bDAuMjQ0LTAuMTUyICAgYzAuNTY3LTAuMzY1LDAuOTYyLTAuOTQ0LDEuMDk2LTEuNjA2YzAuMTM0LTAuNjYxLTAuMDA2LTEuMzQ5LTAuMzg2LTEuOTA1Yy0xOC4wMTQtMjYuMzYyLTQ1LjYyNC0zMC4zMzUtNTYuNzQtMzAuODEzICAgYy0xLjYxMy0wLjE2MS0zLjI3OC0wLjI0Mi00Ljk1LTAuMjQyYy0xMy4wNTYsMC0yNS41NjMsNC45MzEtMzUuNjExLDguODkzYy02LjkzNiwyLjczNS0xMi45MjcsNS4wOTctMTcuMDU5LDUuMDk3ICAgYy00LjY0MywwLTEwLjY2OC0yLjM5MS0xNy42NDUtNS4xNTljLTkuMzMtMy43MDMtMTkuOTA1LTcuODk5LTMxLjEtNy44OTljLTAuMjY3LDAtMC41MywwLjAwMy0wLjc4OSwwLjAwOCAgIEM3OC44OTQsNzMuNjQzLDU0LjI5OCw4OC41MzUsNDAuNzM4LDExMi4xMTl6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBpZD0iWE1MSURfMjMwXyIgZD0iTTIxMi4xMDEsMC4wMDJjLTE1Ljc2MywwLjY0Mi0zNC42NzIsMTAuMzQ1LTQ1Ljk3NCwyMy41ODNjLTkuNjA1LDExLjEyNy0xOC45ODgsMjkuNjc5LTE2LjUxNiw0OC4zNzkgICBjMC4xNTUsMS4xNywxLjEwNywyLjA3MywyLjI4NCwyLjE2NGMxLjA2NCwwLjA4MywyLjE1LDAuMTI1LDMuMjMyLDAuMTI2YzE1LjQxMywwLDMyLjA0LTguNTI3LDQzLjM5NS0yMi4yNTcgICBjMTEuOTUxLTE0LjQ5OCwxNy45OTQtMzMuMTA0LDE2LjE2Ni00OS43N0MyMTQuNTQ0LDAuOTIxLDIxMy4zOTUtMC4wNDksMjEyLjEwMSwwLjAwMnoiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    }
+
+    .market-btn-light.amazon-btn {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0idXVpZDo1RDIwODkyNDkzQkZEQjExOTE0QTg1OTBEMzE1MDhDOCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1QjFCQzQ2QjRGNkQxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1QjFCQzQ2QTRGNkQxMUU3OUY5REJEQzBGNkVBQUI5QiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QUM1ODJFMkIxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QUM1ODJFM0IxNEExMUUzQkY1NEUzQkNCRjlEODA1RSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk2CzRIAAAcFSURBVHja5FxpbBZVFH2ULlhQCq2oiBWLWqCI0AoqKILgGo2KEqlGjSKKIuJaC9EgRKNYURL9YQ2KawKICO5RqZYYsKDFtS1VsSpaU2ypgQYo0HpP5lTGz2/pvNnrTU7yLXNn3px5775777tvurW3tysf5DDBEMEAwUmCEwX9+TsalCRoEfwuqBF8KagTVAt2e9nQZA+vdYRgimCi4GJBd41z7BK8LlgjeMOTVqMHuYxcwRrBgXZnZYegyO32d3NxiGG4LBVMdvkZN7JnfuzGyZNcavQkwXYPyIFkCsoED4SFoDsFHwpSPTb8CwQPO31Sp4fYbMFi5a9MEzwfRILGu2UHNORYwS9BGmIpgldVcGR+0GzQI3T0giKY1XoHZYjBAazHuTT1ywUrOOvtFfQQDBPMEmTYaNd0wZIgOIrzNB29zYKcBOcuseFIljjhKDoxxC7U0FkuGCnYmuC4ewVzNNt1ahCGGILNXy3qIOAcalEHAWuuRZ0/BUcKDvhppM/X0HlQQ+dtDZ0setm+zmKtFo9HCuM9jeuUabYv3e90x0uCfvReewoOZZAai3g4kjs1rlNnwz8LVKjRgwT1EeQIjicGCdoEM5gEsyonCGo19PIEVUFKmO0hGgRbnIwZ/fI4k1TXFtvEJgf8BtNo13R9mv1dgSDYpwJlJO6zaL/6MiLPofHXlX1hI+gYwVjBZYLBDHCz/u9DbKCgkK7AoLAZMTcJwpBZJLgozFbeLYKeFNzRFaZBpwk6TvCpClbyLDAEnS5Y39UcKacIynWInEbGa0i471DGUnMD7dk8XzxNB2IxrH/9wClcR5BmxVLRa4KvYjh3urEY4sAf/e5BT9sg5ynB7UGOxewSNFwZyXEduVIZyfpAi91g9SZNvVkWyWkPI0FYd7peQ289h2UoYkY7BI1SeinNpRo6PcJGEBzBMZq672u6EaEiCOSM09BrVsYKqlXJ12xnml8EwS/J0dDbRb/HK4LS/SIoW3CUhp5O4SbW/s+yERv6QlCa0qsgy1DWqy6m2ZjFJvtFEIZJq4beIcqoj7bSe4pt3N9UwdF+EIT1+D80dWdYOPYZZSTt7cg9fhD0vUpcmRFLrhOM7sRxJYJLHZipkbgr8JogeMPrbDT6E8EZMf7rJXjL7pOPkBf9SHecI/jAZsNB1HPKyP1gSp5CuCHIHCwU/OYVQZiN6ml4wyJPCO72Khb7S/CCCpfs93KIQVAp9p2HN7iKQbJOgu5spVHHbTcfhNKSxz0i5zHB5Zz6rQiKtvKUbpG7Q9uGNrS7K3Mjrrexk3pVgsygbIfaJDjF4V6DoqtL1H9rFDHEahPkiZBWucB2CxzegLbSwV5TnuDpF8TRfdape3Jjl94EQY0NYioFkzp5rdFR9Oe4suNwb2m2Xlh/c8xNNUiooarjZCJabgYBL2oWsWl3C92GGotNQBnNMga2M+U+VnVCBxnRkRyqiPX2MLbcKPjZfF/mNAKWjlNshhBmWccLjqJt6kuSujMbgOKmnWzQF8pY4GuznFYoza6Rm7lVGYVX7yY4fASzoWMYn/Wno4sHhcLzCkYH2DDc9C8/SC60gm4+DriaCl1FzhU8xIfVGVkopBdH9qBr6GkW8mnODqGnHE3OUwcXChoJ5MWbOQvmRMk8/lP2lxyRBLuKYxJFT1ieuZb5m9oQE/Q1CdhOpzGa5HF49TSFUTE9aWz6f5OfJ9B4olLs8JAShIC6Lg45iuHSN6bvdYlCDThnq03f72IWsUj5uIjnkCCffh97ViF/w8TRUT/ZZA5L4sViqERdEnFi5FO2KWMLZu+QEZPOdqP9jyrjnSG38L8BphHymTKVzCQKVlG5EVm4hC1GxUw8IdmVH3BiYF9K6W+h3Vkmg91RfDHRdPxiq9H8AhrtliiW/gb6MNUchsMCQgqcx9sEmwXfkghzj0ebc01OacdCwk/KeCmCijaLxZN3eFFUgZ0Wo0GLTA4ifKpKwQYPSYG3ji0LVzAdHEvgupirUvqYguwbIw+2siC3jd72XBX/FRDj1MF1+zo+xWoavgqlt18sUlI4tDHLDmfYMDiBzj72+FcifkeFGyrY8NqdspgZRYuxWD7H6pkWb6yVSbZ6+iVNNIgN/NzCYd/Ghwd7gf1nKOLsR0OKmGuIxUliJR3fyL1qvUzhzsBoMabukm4le8lUJsI7u06fynhohEfDDj0X1WxrY/yfyZl6plsp12UM+LCGtVUFRz5nFDA0DjmKPWe6irOM7tSGukV0tIrYOL9kLXs1gtKXnTih0zsOS9i48cpI5jd7QEoVPWMYa7zYabmTJ3erOLKcuJ+GfCx9qcE0jHakgQm21bSFFW6y73b1KDIEHxHzmZzKpt+RzxkpgxmEVHWwZA56uznDNNFd2ESXod7LMfu3AAMA3eQjZHI91/8AAAAASUVORK5CYII=);
+    }
+  </style>
+
+  <style>
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      padding-top: 30px;
+      height: 0;
+      overflow: hidden;
+    }
+
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-danger" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  <!-- Spinner End -->
+
+  <!-- Navbar Start -->
+  <div class="container-fluid sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark p-0">
+        <a href="/" class="navbar-brand">
+          <!-- <img src="img/logo-kurirmoo.png" alt="" width="80px"> -->
+          <h1 class="text-white">Kurirmoo<span class="text-dark">.</span></h1>
+        </a>
+        <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#about-us" class="nav-item nav-link">Tentang Kami</a>
+            <a href="#Keunggulan" class="nav-item nav-link">Keunggulan</a>
+            <a href="#armada" class="nav-item nav-link">Armada</a>
+            <a href="#tutor_aplikasi" class="nav-item nav-link">Tutorial Aplikasi</a>
+            <a href="#footer" class="nav-item nav-link">Kontak</a>
+          </div>
+          <!-- <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- Navbar End -->
+
+  <!-- Hero Start -->
+  <div class="container-fluid pt-5 bg-primary hero-header mb-5">
+    <div class="container pt-5">
+      <div class="row g-5 pt-5">
+        <div class="col-lg-4 align-self-center text-center text-lg-start mb-lg-5">
+          <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Kurirmoo</div>
+          <h1 class="display-4 text-white mb-4 animated slideInRight" style="font-size: 100px;">Kurirmoo<span class="text-dark">.</span></h1>
+          <h3 class="text-white mb-4 animated slideInRight">YOUR DIGITAL LOGISTICS SOLUTION</h3>
+          <a href="#about-us" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Tentang kami</a>
+          <a href="#" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+        </div>
+        <div class="col-lg-8 align-self-end text-center text-lg-end">
+          <img class="img-fluid" src="img/img-hero.png" alt="" width="auto" />
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="icon-boxes position-relative mb-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="container position-relative">
+          <div class="row gy-4 mt-5">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <div class="icon-box">
+                    <div class="icon"><i class="bi bi-gem"></i></div>
+                    <h4 class="title"><a href="#" class="stretched-link">Inovasi Berbasis Teknologi</a></h4>
+                  </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="icon-box">
+                    <div class="icon"><i class="bi bi-gem"></i></div>
+                    <h4 class="title"><a href="#" class="stretched-link">Keamanan dan Transparansi Total</a></h4>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="icon-box">
+                    <div class="icon"><i class="bi bi-gem"></i></div>
+                    <h4 class="title"><a href="#" class="stretched-link">Dedicated Enterprise Support</a></h4>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="icon-box">
+                    <div class="icon"><i class="bi bi-gem"></i></div>
+                    <h4 class="title"><a href="#" class="stretched-link">Dukungan Pelanggan Kelas Satu</a></h4>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  </div>
+  <!-- Hero End -->
+
+  <!-- Full Screen Search Start -->
+  <!-- <div class="modal fade" id="searchModal" tabindex="-1">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(20, 24, 62, 0.7)">
+          <div class="modal-header border-0">
+            <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center">
+            <div class="input-group" style="max-width: 600px">
+              <input type="text" class="form-control bg-transparent border-light p-3" placeholder="Type search keyword" />
+              <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <!-- Full Screen Search End -->
+
+  <!-- Testimonial Start -->
+  <div class="container-xxl py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+      </div>
+      <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
+        <div class="owl-carousel testimonial-carousel border-start border-danger">
+          <div class="testimonial-item ps-5">
+            <div class="d-flex align-items-center">
+              <img src="img/iklan/iklan1.png" class="d-block w-100" alt="..." width="auto" height="400px">
+            </div>
+          </div>
+          <div class="testimonial-item ps-5">
+            <div class="d-flex align-items-center">
+              <img src="img/iklan/iklan2.png" class="d-block w-100" alt="..." width="auto" height="400px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- Testimonial End -->
+
+  <!-- Tentang Kami Start -->
+  <div class="container-fluid py-5" id="about-us">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+          <div class="about-img">
+            <img class="img-fluid" src="img/about.jpg" />
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">About Us</div>
+          <h1 class="mb-4">KURIRMOO</h1>
+          <p class="mb-4">
+            Menjadi perusahaan logistik digital terdepan di Indonesia yang berkomitmen untuk mentransformasi bisnis melalui solusi logistik yang cepat, transparan, dan berteknologi tinggi memberikan kemudahan bagi setiap bisnis untuk
+            berkembang dengan dukungan layanan logistik yang dapat diandalkan dan inovatif.
+          </p>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <h6 class="mb-3"><i class="fa fa-check text-danger me-2"></i>Inovasi Berbasis Teknologi</h6>
+              <h6 class="mb-0"><i class="fa fa-check text-danger me-2"></i>Keamanan dan Transparansi Total</h6>
+            </div>
+            <div class="col-sm-6">
+              <h6 class="mb-3"><i class="fa fa-check text-danger me-2"></i>Dedicated Enterprise Support</h6>
+              <h6 class="mb-0"><i class="fa fa-check text-danger me-2"></i>Dukungan Pelanggan Kelas Satu</h6>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mt-4">
+            <!-- <a class="btn btn-danger rounded-pill px-4 me-3" href="">Read More</a> -->
+            <a class="btn btn-outline-danger btn-square me-3" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href="https://www.youtube.com/channel/UCAFM4e005bvMjJnNPevSBeA" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href=""><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-danger btn-square " href=""><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tentang Kami End -->
+
+  <!-- Jenis Muatan -->
+  <div class="container-fluid bg-light mt-5 py-5">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Jenis Muatan</div>
+          <h1 class="mb-4">Jenis Muatan</h1>
+        </div>
+        <div class="col-lg-12">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-box fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kardus" aria-expanded="false" aria-controls="kardus" style="font-size: 17px;">Kardus
+                      </button>
+                    </h3>
+                    <div id="kardus" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Muatan berbentuk karung, seperti beras, biji-bijian, pupuk, atau bahan curah lainnya, ideal untuk pengangkutan skala kecil hingga besar.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-box fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#karung" aria-expanded="false" aria-controls="karung" style="font-size: 17px;">Karung
+                      </button>
+                    </h3>
+                    <div id="karung" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Digunakan untuk mengangkut barang-barang dalam kemasan praktis seperti produk ritel, pakaian, buku, atau barang pecah belah dengan pelindung tambahan.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-box fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#peti" aria-expanded="false" aria-controls="peti" style="font-size: 17px;">Peti
+                      </button>
+                    </h3>
+                    <div id="peti" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Muatan dalam peti kayu atau plastik, cocok untuk barang berat, barang rapuh, atau barang dengan dimensi khusus seperti mesin kecil atau suku cadang.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-arrow-down-right-circle fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Curah" aria-expanded="false" aria-controls="Curah" style="font-size: 17px;">Curah
+                      </button>
+                    </h3>
+                    <div id="Curah" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Barang tanpa kemasan khusus, seperti pasir, batu, biji-bijian, atau bahan mentah lainnya yang diangkut secara langsung dalam truk atau kontainer.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-house fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Pindahan" aria-expanded="false" aria-controls="Pindahan" style="font-size: 17px;">Pindahan Rumah 
+                      </button>
+                    </h3>
+                    <div id="Pindahan" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Layanan untuk memindahkan seluruh isi rumah, termasuk perabotan besar, elektronik, dan barang-barang lainnya dalam skala besar.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-align-start fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Furniture" aria-expanded="false" aria-controls="Furniture" style="font-size: 17px;">Furniture 
+                      </button>
+                    </h3>
+                    <div id="Furniture" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Pengangkutan berbagai jenis perabot, seperti meja, kursi, lemari, atau sofa, dengan perlindungan khusus untuk menghindari kerusakan.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-flower1 fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Tanaman" aria-expanded="false" aria-controls="Tanaman" style="font-size: 17px;">Tanaman
+                      </button>
+                    </h3>
+                    <div id="Tanaman" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Layanan untuk mengangkut tanaman hias atau pertanian dengan perlakuan hati-hati untuk menjaga keutuhan dan kesehatan tanaman.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-asterisk fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Segar" aria-expanded="false" aria-controls="Segar" style="font-size: 17px;">Produk Segar
+                      </button>
+                    </h3>
+                    <div id="Segar" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Pengangkutan bahan makanan seperti buah, sayur, atau produk pertanian lainnya, dengan opsi kontrol suhu jika diperlukan.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-location-arrow fa-2x"></i>
+                      <i class="bi bi-backpack3 fa-2x"></i> </i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Kebutuhan" aria-expanded="false" aria-controls="Kebutuhan" style="font-size: 17px;">Kebutuhan Rumah Tangga
+                      </button>
+                    </h3>
+                    <div id="Kebutuhan" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Barang-barang seperti alat masak, peralatan kebersihan, atau kebutuhan harian lainnya, dikemas untuk memudahkan pengiriman.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- Jenis Muatan -->
+
+  <!-- jangkauan Area Start -->
+  <div class="container-fluid feature pt-5 text-center" style="background-color: #c50303;">
+    <div class="container mb-2">
+      <div class="row g-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s">
+          <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Jangkauan Area Layanan</div>
+          <h1 class="mb-4 text-white">Jangkauan Area</h1>
+        </div>
+        <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
+          <h2 class="text-dark mb-4">Jawa Timur</h2>
+          <div class="text-white mb-2">Surabaya</div>
+          <div class="text-white mb-2">Kediri</div>
+          <div class="text-white mb-2">Malang</div>
+          <div class="text-white mb-2">Mojokerto</div>
+        </div>
+        <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
+          <h2 class="text-dark mb-4">Jawa Tengah</h2>
+          <div class="text-white mb-2">Solo</div>
+          <div class="text-white mb-2">Semarang</div>
+          <div class="text-white mb-2">Blora</div>
+        </div>
+        <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
+          <h2 class="text-dark mb-4">Jawa Barat</h2>
+          <div class="text-white mb-2">Bandung</div>
+          <div class="text-white mb-2">Cirebon</div>
+          <div class="text-white mb-2">Purwakarta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jangkauan Area End -->
+
+  <!-- Keunggulan Start -->
+  <div class="container-fluid bg-light mt-5 py-5" id="Keunggulan">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Keunggulan</div>
+          <h1 class="mb-4">Keunggulan Kurirmoo</h1>
+        </div>
+        <div class="col-lg-12">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 17px;">Beragam armada pengiriman
+                      </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Kami menyediakan berbagai macam armada yang dirancang untuk memenuhi kebutuhan logistik Anda dengan efisien dan terpercaya. Mulai dari  pick-up dan truk untuk muatan sedang, hingga armada besar seperti truk box dan kontainer untuk barang berukuran besar. Armada kami siap mendukung pengiriman Anda dengan standar keamanan tinggi dan dilengkapi teknologi GPS untuk memastikan ketepatan waktu.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-location-arrow fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 17px;">Real-Time Tracking & Digital Delivery
+                      </button>
+                    </h3>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Dapatkan akses penuh ke setiap pengiriman di mana saja dan kapan saja melalui platform kami yang dilengkapi teknologi pelacakan real-time. Transparansi dan akurasi adalah prioritas kami, memberi pelanggan ketenangan dalam proses pengiriman mereka.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-sort fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 17px;">Seamless Logistics Platform
+                      </button>
+                    </h3>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Kami menyediakan satu platform yang mengintegrasikan semua layanan, mulai dari manajemen armada hingga laporan analitik.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-graph-up fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 17px;">Logistics Advisory & Analytics
+                      </button>
+                    </h3>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Kami membantu Anda membuat keputusan berbasis data untuk setiap aspek rantai pasok. Layanan konsultasi kami memberikan wawasan strategis yang membantu bisnis Anda memaksimalkan efisiensi dan mengoptimalkan biaya.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Keunggulan End -->
+
+  <!-- Armada Start -->
+  <div class="container-fluid mt-5 py-5" id="armada">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Armada</div>
+          <h1 class="mb-4">Armada Kurirmoo</h1>
+        </div>
+        <div class="col-lg-12">
+          <div class="row g-4">
+
+            <!-- Pickup L300 Bak -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Pickup">
+                        Pickup L300  Bak
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="Pickup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Pickup L300 Bak</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 242 cm, Lebar : 144 cm, Tinggi : 30 cm, Dimensi : 6 CBM</th>
+                                  <td>Berat Kosong : 800 Kg, Berat Kosong : 800 Kg</td>
+                                  <td>Panjang : 372 cm, Lebar : 183 cm, Tinggi : 182 cm</td>
+                                  <td>Model : G15A, Kapasitas Silinder : 1493 cc, Tenaga Maksimum (PS/rpm) : 78,8/5500</td>
+                                  <td>Ukuran Ban: 165R 13C 94/92R 8PR, </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pickup Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#PickupBox">
+                        Pickup Bak
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="PickupBox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Pickup Bak</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 237 cm, Lebar : 155 cm, Tinggi : 129 cm, Dimensi : 4 CBM</th>
+                                  <td>Berat Kosong : 1 Ton, Berat Maksimal : 1,5 Ton</td>
+                                  <td>Panjang : 428 cm, Lebar : 167 cm, Tinggi : 207 cm</td>
+                                  <td>Model : 3SZ - VE, DOHC VVTi berpendingin air, Kapasitas Silinder : 1298 cc, Tenaga Maksimum (PS/rpm) : 88/6000</td>
+                                  <td>Ukuran Ban: 175 R13 - 8PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pickup Refeer -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#PickupRefeer">
+                        Pickup Refeer
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="PickupRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Pickup Refeer</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 237 cm, Lebar : 155 cm, Tinggi : 129 cm, Dimensi : 4 CBM, Suhu Maksimum : -20 Derajat</th>
+                                  <td>Berat Kosong : 1 Ton, Berat Maksimal : 1,5 Ton</td>
+                                  <td>Panjang : 428 cm, Lebar : 167 cm, Tinggi : 207 cm</td>
+                                  <td>Model : 3SZ - VE, DOHC VVTi berpendingin air, Kapasitas Silinder : 1298 cc, Tenaga Maksimum (PS/rpm) : 88/6000</td>
+                                  <td>Ukuran Ban: 175 R13 - 8PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Granmax Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.4s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Granmax">
+                        Granmax Box
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="Granmax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Granmax Box</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Berat Kosong : 2 Ton, Berat Maksimal : 3 Ton</th>
+                                  <td>BPanjang : 150 cm, Lebar : 160 cm, Tinggi : 108 cm</td>
+                                  <td>Model : K3 - DE, DOHC, Kapasitas Silinder : 1298 cc</td>
+                                  <td>Ukuran Ban : 165 R13 - C</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Granmax Blindvan -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.4s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#GranmaxBlin">
+                        Granmax Blindvan
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="GranmaxBlin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark"> Granmax Blindvan</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Berat Kosong : 2 Ton, Berat Maksimal : 3 Ton</th>
+                                  <td>BPanjang : 150 cm, Lebar : 160 cm, Tinggi : 108 cm</td>
+                                  <td>Model : K3 - DE, DOHC, Kapasitas Silinder : 1298 cc</td>
+                                  <td>Ukuran Ban : 165 R13 - C</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+            <!-- Colt Diesel Engkel Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.6s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                      <h3 class="mb-3 text-center">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Coltengkel">
+                          Colt Diesel Engkel Box
+                        </button>
+                      </h3>
+                      <div class="modal fade" id="Coltengkel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="text-dark">Colt Diesel Engkel Box</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Ukuran Karoseri</th>
+                                    <th scope="col">Berat</th>
+                                    <th scope="col">Ukuran Mobil</th>
+                                    <th scope="col">Mesin</th>
+                                    <th scope="col">Roda dan Ban</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Panjang : 350 cm, Lebar : 160 cm, Tinggi : 80 cm</th>
+                                    <td>Berat Kosong : 1,5 Ton, Berat Maksimal : 5,1 Ton</td>
+                                    <td>Panjang : 459 cm, Lebar : 169 cm, Tinggi : 212 cm</td>
+                                    <td>Model : 4JB1-TC, Kapasitas Silinder : 2,771, Tenaga Maksimum (PS/rpm) : 100 / 3,400</td>
+                                    <td>Ukuran Ban: 7.50 - 15 - 10PR</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Engkel Terbuka -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                      <h3 class="mb-3 text-center">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelTerbuka">
+                          Colt Diesel Engkel Terbuka
+                        </button>
+                      </h3>
+                      <div class="modal fade" id="ColtengkelTerbuka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="text-dark">Colt Diesel Engkel Terbuka</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Ukuran Karoseri</th>
+                                    <th scope="col">Berat</th>
+                                    <th scope="col">Ukuran Mobil</th>
+                                    <th scope="col">Mesin</th>
+                                    <th scope="col">Roda dan Ban</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">Panjang : 350 cm, Lebar : 173 cm, Dimensi : 11 CBM</th>
+                                    <td>Berat Kosong : 1,8 Ton, Berat Maksimal : 5 Ton</td>
+                                    <td>Panjang : 473 cm, Lebar : 175 cm, Tinggi : 205 cm</td>
+                                    <td>Model : 4D34-2AT5, Kapasitas Silinder : 3.908, Tenaga Maksimum (PS/rpm) : 110/2.900</td>
+                                    <td>-</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Engkel Refeer Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.8s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelRefeer">
+                        Colt Diesel Engkel Refeer Box
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtengkelRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Engkel Refeer Box</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 350 cm, Lebar : 173 cm, Tinggi : 200 cm, Dimensi : 9 CBM</th>
+                                  <td>Berat Kosong : 1,8 Ton, Berat Maksimal : 5 Ton</td>
+                                  <td>Panjang : 473 cm, Lebar : 175 cm</td>
+                                  <td>Model : 4D34-2AT5, Kapasitas Silinder : 3.908</td>
+                                  <td>-</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Engkel Bak -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.9s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelBak">
+                        Colt Diesel Engkel Bak
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtengkelBak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Engkel Bak</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 350 cm, Lebar : 160 cm, Tinggi : 80 cm</th>
+                                  <td>Berat Kosong : 1,5 Ton, Berat Maksimal : 5,1 Ton</td>
+                                  <td>Panjang : 459 cm, Lebar : 169 cm</td>
+                                  <td>Model : 4JB1-TC, Kapasitas Silinder : 2,771</td>
+                                  <td>Ukuran Ban: 7.50 - 15 - 10PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.0s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoubleBak">
+                        Colt Diesel Double Box
+                      </button>
+                    </h3>
+                    
+                    <div class="modal fade" id="ColtdieselDoubleBak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Box</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 560 cm, Lebar : 200 cm, Tinggi : 220 cm</th>
+                                  <td>Berat Kosong : 2,3 Ton, Berat Maksimal : 7,5 Ton</td>
+                                  <td>Panjang : 670 cm, Lebar : 200 cm, Tinggi : 220 cm</td>
+                                  <td>Model : 4D34-2AT7, Kapasitas Silinder : 3.908</td>
+                                  <td>Ukuran Roda: 7.50-16-14PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Terbuka -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoubleTerbuka">
+                        Colt Diesel Double Terbuka
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtdieselDoubleTerbuka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Terbuka</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 560 cm, Lebar : 200 cm</th>
+                                  <td>Berat Kosong : 2,3 Ton, Berat Maksimal : 8 Ton</td>
+                                  <td>Panjang : 670 cm, Lebar : 200 cm, Tinggi : 220 cm</td>
+                                  <td>Model : 4D34-2AT7, Kapasitas Silinder : 3.908</td>
+                                  <td>Ukuran Roda: 7.50-16-14PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Refeer Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.2s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoubleRefeer">
+                        Colt Diesel Double Refeer Box
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtdieselDoubleRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Refeer Box</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 560 cm, Lebar : 200 cm, Tinggi : 220 cm</th>
+                                  <td>Berat Kosong : 2,5 Ton, Berat Maksimal : 8 Ton</td>
+                                  <td>Panjang : 670 cm, Lebar : 200 cm, Tinggi : 220 cm</td>
+                                  <td>Model : 4D34-2AT7, Kapasitas Silinder : 3.908</td>
+                                  <td>Ukuran Roda: 7.50-16-14PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Bak -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.3s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoubleBax">
+                        Colt Diesel Double Bak
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtdieselDoubleRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Bak</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 560 cm, Lebar : 200 cm, Tinggi : 220 cm</th>
+                                  <td>Berat Kosong : 2,3 Ton, Berat Maksimal : 7,5 Ton</td>
+                                  <td>Panjang : 670 cm, Lebar : 200 cm, Tinggi : 220 cm</td>
+                                  <td>Model : 4D34-2AT7, Kapasitas Silinder : 3.908</td>
+                                  <td>Ukuran Roda: 7.50-16-14PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Long Box -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.4s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoublelongBax">
+                        Colt Diesel Double Long Box
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtdieselDoublelongBax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Long Bak</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 720 cm, Lebar : 230 cm, Tinggi : 250 cm</th>
+                                  <td>Berat Kosong : 4 Ton, Berat Maksimal : 14 Ton</td>
+                                  <td>Panjang : 940 cm, Lebar : 240 cm, Tinggi : 270 cm</td>
+                                  <td>Model : 6D16-3AT2, Kapasitas Silinder : 7.545 CC</td>
+                                  <td>Ukuran Roda: 10.00-20-16PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colt Diesel Double Long Terbuka -->
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.5s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-3x"></i>
+                    </div>
+                    <h3 class="mb-3 text-center">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtdieselDoublelongTerbuka">
+                        Colt Diesel Double Long Terbuka
+                      </button>
+                    </h3>
+                    <div class="modal fade" id="ColtdieselDoublelongTerbuka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="text-dark">Colt Diesel Double Long Terbuka</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Ukuran Karoseri</th>
+                                  <th scope="col">Berat</th>
+                                  <th scope="col">Ukuran Mobil</th>
+                                  <th scope="col">Mesin</th>
+                                  <th scope="col">Roda dan Ban</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">Panjang : 560 cm, Lebar : 200 cm</th>
+                                  <td>Berat Kosong : 2,5 Ton, Berat Maksimal : 8 Ton</td>
+                                  <td>Panjang : 670 cm, Lebar : 200 cm, Tinggi : 220 cm</td>
+                                  <td>Model : 4D34-2AT8, Kapasitas Silinder : 3.908 CC</td>
+                                  <td>Ukuran Roda: 7.50 – 16 – 14PR</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fuso Box -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.6s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                        Fuso Box
+                      </button>
+                    </h3>
+                    <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Fuso Terbuka -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.7s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                        Fuso Terbuka
+                      </button>
+                    </h3>
+                    <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="headingSeventeen" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Box -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.8s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                        Tronton Box
+                      </button>
+                    </h3>
+                    <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="headingEighteen" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Terbuka -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="1.9s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                        Tronton Terbuka
+                      </button>
+                    </h3>
+                    <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Car Carrier -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.0s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                        Tronton Car Carrier
+                      </button>
+                    </h3>
+                    <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="headingTwenty" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Refeer -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                        Tronton Refeer
+                      </button>
+                    </h3>
+                    <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Wingbox -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.2s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                        Tronton Wingbox
+                      </button>
+                    </h3>
+                    <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Bak -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.3s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                        Tronton Bak
+                      </button>
+                    </h3>
+                    <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="headingTwentyThree" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Tronton Box 500 Ranger -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.4s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                        Tronton Box 500 Ranger
+                      </button>
+                    </h3>
+                    <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Short Chassis Losbak -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.5s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                        Trailer Short Chassis Losbak
+                      </button>
+                    </h3>
+                    <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Box 20 Feet -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.6s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                        Trailer Box 20 Feet
+                      </button>
+                    </h3>
+                    <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="headingTwentySix" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Box 40 Feet -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.7s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                        Trailer Box 40 Feet
+                      </button>
+                    </h3>
+                    <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="headingTwentySeven" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Combo Chassis -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.8s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                        Trailer Combo Chassis
+                      </button>
+                    </h3>
+                    <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="headingTwentyEight" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Lowbed -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="2.9s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                        Trailer Lowbed
+                      </button>
+                    </h3>
+                    <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="headingTwentyNine" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Car Carrier -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="3.0s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                        Trailer Car Carrier
+                      </button>
+                    </h3>
+                    <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="headingThirty" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Trailer Container -->
+            <!-- <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="3.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                        Trailer Container
+                      </button>
+                    </h3>
+                    <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="headingThirtyOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Detail
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Armada End -->
+
+  <!-- Artikel Slide -->
+  <div class="container-xxl py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
+          <div class="owl-carousel testimonial-carousel border-start border-primary">
+            <div class="testimonial-item ps-5" style="background-image: url('img/iklan/iklan1.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
+              <p class="fs-4">Artikel 1</p>
+              <div class="d-flex align-items-center">
+                <div class="ps-3">
+                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item ps-5" style="background-image: url('img/iklan/iklan2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
+              <p class="fs-4">Artikel 2</p>
+              <div class="d-flex align-items-center">
+                <div class="ps-3">
+                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item ps-5" style="background-image: url('img/iklan/iklan1.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
+              <p class="fs-4">Artikel 3</p>
+              <div class="d-flex align-items-center">
+                <div class="ps-3">
+                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Artikel</div>
+          <h1 class="mb-4">Artikel</h1>
+          <p class="mb-4">Beberapa Artikel Kurirmoo</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Artikel Slide -->
+
+  <!-- FAQs  -->
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+        <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Popular FAQs</div>
+        <h1 class="mb-4">Frequently Asked Questions</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Apa itu Kurirmoo?</button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kurirmoo adalah aplikasi digital logistik yang menawarkan layanan ekspedisi dan pengiriman barang dengan berbagai pilihan armada, mulai dari motor hingga truk besar. Kami memberikan solusi logistik cepat, aman, dan terpercaya.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Layanan apa saja yang tersedia di Kurirmoo?</button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami menyediakan layanan pengiriman barang untuk kebutuhan individu maupun bisnis, pengangkutan muatan besar, layanan antar-jemput barang, dan pelacakan pengiriman secara real-time melalui GPS.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Bagaimana cara menggunakan layanan Kurirmoo?</button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Anda cukup mengunduh aplikasi Kurirmoo, membuat akun, memilih layanan yang sesuai, memasukkan detail pengiriman, dan tim kami akan segera memproses permintaan Anda.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Jenis barang apa saja yang bisa dikirim melalui Kurirmoo?</button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami melayani pengiriman berbagai jenis barang, kecuali barang berbahaya, ilegal, atau barang yang melanggar aturan hukum yang berlaku.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Apakah barang yang dikirim melalui Kurirmoo diasuransikan?</button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami menawarkan opsi asuransi pengiriman untuk memastikan keamanan barang Anda. Nilai dan syarat asuransi akan disesuaikan berdasarkan kesepakatan.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="heading3">Apakah Kurirmoo melayani pengiriman di luar kota atau antar pulau?</button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami melayani pengiriman ke berbagai daerah, termasuk antar kota dan antar pulau, dengan pilihan armada yang sesuai dengan kebutuhan Anda.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse3">Bagaimana cara melacak pengiriman saya?</button>
+              </h2>
+              <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Anda dapat melacak pengiriman secara real-time melalui aplikasi Kurirmoo. Informasi pelacakan akan tersedia di halaman pengiriman Anda.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan layanan untuk mitra bisnis?</button>
+              </h2>
+              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Tentu! Kami memiliki program kerja sama dengan mitra bisnis untuk memenuhi kebutuhan logistik skala besar, termasuk layanan khusus dan laporan pengiriman berkala. Hubungi kami untuk informasi lebih lanjut.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse3">Bagaimana cara melaporkan masalah atau keluhan?</button>
+              </h2>
+              <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Jika Anda mengalami masalah, Anda dapat menghubungi tim kami melalui email di admin@kurirmoo.com atau melalui formulir kontak yang tersedia di website dan aplikasi kami.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse3">Apa keunggulan Kurirmoo dibanding layanan logistik lainnya?</button>
+              </h2>
+              <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kurirmoo menawarkan fleksibilitas armada, pengiriman cepat, layanan pelanggan responsif, dan pelacakan real-time. Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Semuanya dirancang untuk memberikan pengalaman logistik terbaik bagi pelanggan.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+              <h2 class="accordion-header" id="heading11">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse3">Bagaimana cara mendaftar sebagai mitra pengemudi di Kurirmoo?</button>
+              </h2>
+              <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Untuk menjadi mitra pengemudi, Anda dapat mendaftar melalui aplikasi atau website kami. Lengkapi dokumen yang diperlukan, dan tim kami akan memproses aplikasi Anda secepatnya.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+        <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Kerjasama Perusahaan Pemilik Muatan</div>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan1" aria-expanded="false" aria-controls="collapse3">Apa saja jenis kerja sama yang ditawarkan Kurirmoo kepada perusahaan besar??</button>
+              </h2>
+              <div id="muatan1" class="accordion-collapse collapse" aria-labelledby="headingmuatan1" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kurirmoo menawarkan layanan kerja sama logistik, termasuk pengangkutan muatan reguler, layanan ekspedisi khusus, laporan pengiriman berkala, dan pengelolaan logistik terintegrasi untuk mendukung kebutuhan operasional perusahaan.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan2" aria-expanded="false" aria-controls="collapse3">2.	Apa keunggulan bekerja sama dengan Kurirmoo?</button>
+              </h2>
+              <div id="muatan2" class="accordion-collapse collapse" aria-labelledby="headingmuatan2" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami menawarkan armada yang beragam, pengiriman cepat dan aman, fleksibilitas jadwal, laporan pengiriman yang transparan, serta teknologi pelacakan real-time melalui GPS dan aplikasi.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan3" aria-expanded="false" aria-controls="collapse3">3.	Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
+              </h2>
+              <div id="muatan3" class="accordion-collapse collapse" aria-labelledby="headingmuatan3" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Hubungi tim kami melalui email di admin@kurirmoo.com atau formulir kontak di website untuk mendiskusikan kebutuhan Anda. Setelah diskusi awal, kami akan menyediakan dokumen kerja sama dan memulai perjanjian resmi.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan4" aria-expanded="false" aria-controls="collapse3">4.	Berapa lama jangka waktu kerja sama yang ditawarkan?</button>
+              </h2>
+              <div id="muatan4" class="accordion-collapse collapse" aria-labelledby="headingmuatan4" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Standar jangka waktu kerja sama kami adalah 6 bulan, namun durasi dapat disesuaikan berdasarkan kebutuhan perusahaan Anda.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan5" aria-expanded="false" aria-controls="collapse3">5.	Apakah Kurirmoo memberikan layanan eksklusif untuk mitra perusahaan?</button>
+              </h2>
+              <div id="muatan5" class="accordion-collapse collapse" aria-labelledby="headingmuatan5" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami menyediakan layanan eksklusif untuk mitra perusahaan, termasuk armada khusus, jadwal yang disesuaikan, dan prioritas layanan.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan6" aria-expanded="false" aria-controls="collapse6">6.	Bagaimana sistem pembayaran untuk layanan kerja sama ini?</button>
+              </h2>
+              <div id="muatan6" class="accordion-collapse collapse" aria-labelledby="headingmuatan6" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Sistem pembayaran dilakukan 10 hari setelah invoice diterima. Ketentuan ini dapat dinegosiasikan lebih lanjut sesuai kebutuhan perusahaan Anda.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan7" aria-expanded="false" aria-controls="collapse3">7.	Apakah Kurirmoo menyediakan asuransi untuk barang yang dikirim?</button>
+              </h2>
+              <div id="muatan7" class="accordion-collapse collapse" aria-labelledby="headingmuatan7" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami menyediakan opsi asuransi barang yang nilainya akan disesuaikan dengan kesepakatan antara Kurirmoo dan perusahaan mitra.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan8" aria-expanded="false" aria-controls="collapse3">8.	Bagaimana mekanisme pelaporan pengiriman untuk mitra perusahaan?</button>
+              </h2>
+              <div id="muatan8" class="accordion-collapse collapse" aria-labelledby="headingmuatan8" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami menyediakan laporan pengiriman secara berkala atau berdasarkan permintaan pemilik muatan. Laporan ini mencakup informasi lengkap tentang status pengiriman dan dokumentasi terkait.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan9" aria-expanded="false" aria-controls="collapse3">Bagaimana Kurirmoo menangani kondisi force majeure atau keterlambatan pengiriman?</button>
+              </h2>
+              <div id="muatan9" class="accordion-collapse collapse" aria-labelledby="headingmuatan9" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Dalam kondisi di luar kendali, seperti force majeure, kami akan berkoordinasi langsung dengan perusahaan mitra untuk mencari solusi terbaik sesuai kesepakatan.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan10" aria-expanded="false" aria-controls="collapse3">Apa jenis barang yang dapat diangkut oleh Kurirmoo dalam kerja sama ini?</button>
+              </h2>
+              <div id="muatan10" class="accordion-collapse collapse" aria-labelledby="headingmuatan10" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami melayani pengangkutan berbagai jenis barang kecuali barang berbahaya atau yang melanggar hukum. Jenis barang yang spesifik dapat dibahas lebih lanjut dalam perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan11">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan11" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan layanan antar jemput barang?</button>
+              </h2>
+              <div id="muatan11" class="accordion-collapse collapse" aria-labelledby="headingmuatan11" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, layanan antar jemput disesuaikan dengan jadwal dan lokasi yang disepakati bersama dengan pemilik muatan.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan12" aria-expanded="false" aria-controls="collapse4">Bagaimana data sensitif perusahaan mitra dikelola oleh Kurirmoo?</button>
+              </h2>
+              <div id="muatan12" class="accordion-collapse collapse" aria-labelledby="headingmuatan12" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Data sensitif perusahaan akan dikelola dengan standar keamanan tinggi dan sesuai kesepakatan yang ditentukan dalam perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan13">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan13" aria-expanded="false" aria-controls="collapse3">Apakah ada klausul tambahan dalam perjanjian kerja sama?</button>
+              </h2>
+              <div id="muatan13" class="accordion-collapse collapse" aria-labelledby="headingmuatan13" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, klausul tambahan seperti kebijakan penggantian barang, pengelolaan data sensitif, dan penanganan situasi khusus akan dibahas secara mendetail dalam perjanjian.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="headingmuatan14">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan14" aria-expanded="false" aria-controls="collapse3">Bagaimana perusahaan mitra dapat menghubungi tim logistik Kurirmoo?</button>
+              </h2>
+              <div id="muatan14" class="accordion-collapse collapse" aria-labelledby="headingmuatan14" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Perusahaan mitra dapat menghubungi tim logistik kami melalui email, telepon, atau melalui kanal komunikasi yang telah disepakati dalam perjanjian.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+        <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Kerjasama Perusahaan Pemilik Ekspedisi</div>
+        <br>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="accordion" id="accordionFAQ1">
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi1" aria-expanded="false" aria-controls="collapseOne">Apa jenis kerja sama yang ditawarkan Kurirmoo kepada pemilik ekspedisi?</button>
+              </h2>
+              <div id="ekspedisi1" class="accordion-collapse collapse" aria-labelledby="ekspedisi1" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami menawarkan kerja sama berupa pengisian muatan kosong, optimalisasi rute, serta integrasi layanan logistik melalui platform Kurirmoo untuk meningkatkan efisiensi operasional.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi2" aria-expanded="false" aria-controls="collapseOne">Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
+              </h2>
+              <div id="ekspedisi2" class="accordion-collapse collapse" aria-labelledby="ekspedisi2" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Hubungi kami melalui email di admin@kurirmoo.com atau isi formulir kontak di website kami. Tim kami akan menjadwalkan pertemuan untuk memahami kebutuhan Anda dan mempersiapkan perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi3" aria-expanded="false" aria-controls="collapseOne">Apa keuntungan bekerja sama dengan Kurirmoo bagi pemilik ekspedisi?</button>
+              </h2>
+              <div id="ekspedisi3" class="accordion-collapse collapse" aria-labelledby="ekspedisi3" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kurirmoo akan memberikan muatan sesuai dengan armada yang dimiliki, serta menyediakan teknologi pelacakan real-time untuk transparansi pengiriman.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi4" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo menyediakan layanan pengelolaan armada?</button>
+              </h2>
+              <div id="ekspedisi4" class="accordion-collapse collapse" aria-labelledby="ekspedisi4" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami dapat membantu mengelola armada Anda dengan menyediakan sistem pencatatan pengiriman, pelacakan GPS, serta laporan operasional secara berkala.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi5" aria-expanded="false" aria-controls="collapseOne">Bagaimana sistem pembayaran kerja sama dengan Kurirmoo?</button>
+              </h2>
+              <div id="ekspedisi5" class="accordion-collapse collapse" aria-labelledby="ekspedisi5" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Pembayaran dilakukan dua minggu setelah invoice diterima. Sistem ini dapat disesuaikan sesuai kesepakatan dalam perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi6" aria-expanded="false" aria-controls="collapseOne">Apakah ada biaya bergabung bagi pemilik ekspedisi?</button>
+              </h2>
+              <div id="ekspedisi6" class="accordion-collapse collapse" aria-labelledby="ekspedisi6" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Tidak ada biaya bergabung. Namun, kami memiliki struktur biaya berbasis layanan yang akan dibahas lebih lanjut dalam perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi7" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo membantu mencarikan pelanggan untuk pemilik ekspedisi?</button>
+              </h2>
+              <div id="ekspedisi7" class="accordion-collapse collapse" aria-labelledby="ekspedisi7" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Pasti, kami akan memprioritaskan distribusi muatan kepada ekspedisi yang telah bergabung dalam jaringan kami, memastikan peluang pengiriman lebih besar dan layanan yang saling menguntungkan.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi8" aria-expanded="false" aria-controls="collapseOne">Bagaimana pengaturan jadwal dan rute pengiriman?</button>
+              </h2>
+              <div id="ekspedisi8" class="accordion-collapse collapse" aria-labelledby="ekspedisi8" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Jadwal dan rute pengiriman akan diatur berdasarkan kesepakatan antara pemilik ekspedisi, Kurirmoo, dan pelanggan untuk memastikan efisiensi dan ketepatan waktu.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi9" aria-expanded="false" aria-controls="collapseOne">Apakah barang yang diangkut melalui kerja sama ini diasuransikan?</button>
+              </h2>
+              <div id="ekspedisi9" class="accordion-collapse collapse" aria-labelledby="ekspedisi9" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kurirmoo menyediakan opsi asuransi untuk barang yang diangkut, dengan nilai asuransi yang disesuaikan berdasarkan kesepakatan bersama.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi10" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo memberikan laporan operasional?</button>
+              </h2>
+              <div id="ekspedisi10" class="accordion-collapse collapse" aria-labelledby="ekspedisi10" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, kami menyediakan laporan operasional secara berkala, termasuk detail pengiriman, performa armada, dan analisis data untuk membantu meningkatkan efisiensi ekspedisi Anda.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi11">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi11" aria-expanded="false" aria-controls="collapseOne">Bagaimana Kurirmoo menangani kondisi force majeure dalam kerja sama ini?</button>
+              </h2>
+              <div id="ekspedisi11" class="accordion-collapse collapse" aria-labelledby="ekspedisi11" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Dalam situasi force majeure, kami akan berkoordinasi dengan pemilik ekspedisi dan pelanggan untuk mencari solusi terbaik sesuai kesepakatan dalam perjanjian.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi12" aria-expanded="false" aria-controls="collapseOne">Apakah pemilik ekspedisi dapat menggunakan teknologi pelacakan Kurirmoo?</button>
+              </h2>
+              <div id="ekspedisi12" class="accordion-collapse collapse" aria-labelledby="ekspedisi12" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, mitra pemilik ekspedisi akan mendapatkan akses ke teknologi pelacakan yang terpasang diaplikasi kami untuk memantau armada dan barang yang diangkut secara real-time.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi13">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi13" aria-expanded="false" aria-controls="collapseOne">Bagaimana perlindungan data mitra ekspedisi di Kurirmoo?</button>
+              </h2>
+              <div id="ekspedisi13" class="accordion-collapse collapse" aria-labelledby="ekspedisi13" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Data mitra ekspedisi dikelola dengan standar keamanan tinggi dan hanya digunakan untuk tujuan operasional sesuai dengan perjanjian kerja sama.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi14">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi14" aria-expanded="false" aria-controls="collapseOne">Apa jenis barang yang dapat diangkut melalui kerja sama ini?</button>
+              </h2>
+              <div id="ekspedisi14" class="accordion-collapse collapse" aria-labelledby="ekspedisi14" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kami melayani pengangkutan barang yang sesuai dengan peraturan hukum yang berlaku. Barang berbahaya atau ilegal tidak diperbolehkan.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi15">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi15" aria-expanded="false" aria-controls="collapseOne">Bagaimana jika terjadi kerusakan atau kehilangan barang selama pengiriman?</button>
+              </h2>
+              <div id="ekspedisi15" class="accordion-collapse collapse" aria-labelledby="ekspedisi15" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Kebijakan penggantian barang akan ditentukan berdasarkan perjanjian yang disepakati antara pemilik ekspedisi, Kurirmoo, dan pelanggan.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+              <h2 class="accordion-header" id="ekspedisi16">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi16" aria-expanded="false" aria-controls="collapseOne">Apakah ada dukungan pelanggan khusus untuk mitra ekspedisi?</button>
+              </h2>
+              <div id="ekspedisi16" class="accordion-collapse collapse" aria-labelledby="ekspedisi16" data-bs-parent="#accordionFAQ1">
+                <div class="accordion-body">
+                  Ya, mitra ekspedisi akan mendapatkan dukungan khusus dari tim Kurirmoo untuk memastikan kelancaran operasional dan menangani setiap kendala yang mungkin terjadi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FAQs  -->
+
+  <!-- Aplikasi Kami -->
+  <div class="container-fluid bg-dark newsletter py-5">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-6 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+          <img class="img-fluid" src="img/car.png" alt="" />
+        </div>
+        <div class="col-md-6 py-5 wow fadeIn text-center" data-wow-delay="0.5s">
+          <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Aplikasi</div>
+          <h1 class="text-white mb-4">Download Aplikasi Kurirmoo!!</h1>
+          <div class="position-relative w-100 mt-3 mb-2 justify-content-center">
+            <div class="container">
+              <!-- App Store button -->
+              <!-- <a href="/" target="_blank" class="market-btn apple-btn" role="button">
+                  <span class="market-button-subtitle">Download on the</span>
+                  <span class="market-button-title">App Store</span>
+                </a>
+                <br />
+                <br /> -->
+              <!-- Google Play button -->
+              <a href="/" target="_blank" class="market-btn google-btn" role="button">
+                <span class="market-button-subtitle">Download on the</span>
+                <span class="market-button-title">Google Play</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Aplikasi Kami -->
+
+
+  <!-- Tutorial Aplikasi -->
+  <div class="container-fluid py-5 bg-light" id="tutor_aplikasi">
+    <div class="container">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+        <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Aplikasi</div>
+        <h1 class="mb-4">Tutorial Aplikasi Kurirmoo</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/hoe1J55ZpN0?si=l6Gjvc2KJs_58fXx" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/vD-m0VkxeHg?si=ufk2coZiA3EnisHt" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ygx4VDWAoB8?si=XPdtyZ6Z8chFZkS4" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/_2kqIksilJU?si=Yw9zfiIPjFoqUIIR" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/EO2niaXWW0Y?si=tzPdiw5Pyf3WAuJs" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Tutorial Aplikasi -->
+
+
+  <!-- Form Start -->
+  <div class="container-fluid py-5">
+    <div class="container py-5">
+      <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+        <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Form Kerjasama</div>
+        <h1 class="mb-4">Kerjasama</h1>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <p class="text-center mb-4">Formulir untuk kerjasama dengan Kurirmoo.</p>
+          <div class="wow fadeIn" data-wow-delay="0.3s">
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" />
+                    <label for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="email" placeholder="Your Email" />
+                    <label for="email">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" />
+                    <label for="subject">Subject</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-danger w-100 py-3" type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Form End -->
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer pt-5" id="footer">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+          <a href="/" class="d-inline-block mb-3">
+            <h1 class="text-white">Kurirmoo<span class="text-primary">.</span></h1>
+          </a>
+          <p class="mb-0">YOUR DIGITAL LOGISTICS SOLUTION</p>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn float-end" data-wow-delay="0.3s">
+          <h5 class="text-white mb-4">Alamat</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>Surakarta</p>
+          <p><i class="fa fa-phone-alt me-3"></i>089534103230</p>
+          <p><i class="fa fa-envelope me-3"></i>admin@kurirmoo.com</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-light btn-social " href=""><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <h5 class="text-white mb-4">Popular Link</h5>
+          <a class="btn btn-link" href="#about-us">About Us</a>
+          <a class="btn btn-link" href="img/docs/Kebijakan Privasi.pdf" download="Privacy Polish Kurirmoo" target="_blank">Privacy Policy</a>
+          <a class="btn btn-link" href="img/docs/S&K_Kurirmoo.pdf" download="SK Kurirmoo" target="_blank">Syarat dan Ketentuan</a>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <img class="img-fluid" src="img/logo-footer.png" alt="" width="600px" />
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Kurirmoo</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-warning btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
