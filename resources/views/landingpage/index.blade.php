@@ -31,8 +31,8 @@
       <div class="row g-5 pt-5">
         <div class="col-lg-4 align-self-center text-center text-lg-start mb-lg-5">
           <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Kurirmoo</div>
-          <h1 class="display-4 text-white mb-4 animated slideInRight" style="font-size: 100px;">Kurirmoo<span class="text-dark">.</span></h1>
-          <h3 class="text-white mb-4 animated slideInRight">YOUR DIGITAL LOGISTICS SOLUTION</h3>
+          <h1 class="display-4 text-white mb-4 animated slideInRight">Kurirmoo<span class="text-dark">.</span></h1>
+          <p class="text-white mb-4 animated slideInRight">YOUR DIGITAL LOGISTICS SOLUTION</p>
           <a href="#about-us" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Tentang kami</a>
           <a href="#" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
         </div>
@@ -41,49 +41,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="icon-boxes position-relative mb-5" data-aos="fade-up" data-aos-delay="200">
-        <div class="container position-relative">
-          <div class="row gy-4 mt-5">
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                  <div class="icon-box">
-                    <div class="icon"><i class="bi bi-gem"></i></div>
-                    <h4 class="title"><a href="#" class="stretched-link">Inovasi Berbasis Teknologi</a></h4>
-                  </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                  <div class="icon-box">
-                    <div class="icon"><i class="bi bi-gem"></i></div>
-                    <h4 class="title"><a href="#" class="stretched-link">Keamanan dan Transparansi Total</a></h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="icon-box">
-                    <div class="icon"><i class="bi bi-gem"></i></div>
-                    <h4 class="title"><a href="#" class="stretched-link">Dedicated Enterprise Support</a></h4>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="icon-box">
-                    <div class="icon"><i class="bi bi-gem"></i></div>
-                    <h4 class="title"><a href="#" class="stretched-link">Dukungan Pelanggan Kelas Satu</a></h4>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> -->
   </div>
   <!-- Hero End -->
 
@@ -114,12 +71,12 @@
         <div class="owl-carousel testimonial-carousel border-start border-danger">
           <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
-              <img src="{{ asset('assets_landingpage/img/iklan/iklan1.png')}}" class="d-block w-100" alt="..." width="auto" height="400px">
+              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="400px">
             </div>
           </div>
           <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
-              <img src="{{ asset('assets_landingpage/img/iklan/iklan2.png')}}" class="d-block w-100" alt="..." width="auto" height="400px">
+              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="400px">
             </div>
           </div>
         </div>
@@ -2287,7 +2244,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-12">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2F2xRcFHHF12djcGouFzDCrN14WcMt6REtAOFggzhVdDjrQ/viewform?embedded=true" width="1200" height="1566" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2F2xRcFHHF12djcGouFzDCrN14WcMt6REtAOFggzhVdDjrQ/viewform?embedded=true" width="auto" height="1566" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         {{-- <div class="col-lg-7">
           <p class="text-center mb-4">Formulir untuk kerjasama dengan Kurirmoo.</p>
