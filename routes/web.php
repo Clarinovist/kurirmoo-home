@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LandingpageController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,8 +21,17 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', [LandingpageController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// login
+Route::get('/login', [AuthenticatedSessionController::class, 'form_login'])->name('login');
+Route::middleware('guest')->post('/login', [AuthenticatedSessionController::class, 'login'])->name('login');
+Route::get('/logout', [AuthenticatedSessionController::class, 'logout'])->middleware('auth')->name('logout');
 
-require __DIR__.'/auth.php';
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+// require __DIR__.'/auth.php';
+
+// Admin
+
+Route::get('/home-admin', [HomeController::class, 'index'])->name('home-admin');
