@@ -13,8 +13,11 @@ class CreateHeroTable extends Migration
      */
     public function up()
     {
-        Schema::create('hero', function (Blueprint $table) {
+        Schema::create('tb_hero', function (Blueprint $table) {
             $table->id();
+            $table->text('judul');
+            $table->text('desc');
+            $table->text('gambar')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateHeroTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hero');
+        Schema::dropIfExists('tb_hero');
     }
 }

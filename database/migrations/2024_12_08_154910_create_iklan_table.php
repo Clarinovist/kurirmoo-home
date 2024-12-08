@@ -13,8 +13,10 @@ class CreateIklanTable extends Migration
      */
     public function up()
     {
-        Schema::create('iklan', function (Blueprint $table) {
+        Schema::create('tb_iklan', function (Blueprint $table) {
             $table->id();
+            $table->text('gambar')->nullable()->default(NULL);
+            $table->text('link')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateIklanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('iklan');
+        Schema::dropIfExists('tb_iklan');
     }
 }

@@ -15,6 +15,9 @@ class CreateAboutUsTable extends Migration
     {
         Schema::create('about_us', function (Blueprint $table) {
             $table->id();
+            $table->text('judul');
+            $table->text('desc');
+            $table->text('gambar')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
