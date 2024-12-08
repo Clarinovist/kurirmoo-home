@@ -1645,7 +1645,7 @@
       <div class="row g-5">
         <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
           <div class="owl-carousel testimonial-carousel border-start border-primary">
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan1.png')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
               <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
               <p class="fs-4">Artikel 1</p>
               <div class="d-flex align-items-center">
@@ -1654,7 +1654,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan2.png')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
               <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
               <p class="fs-4">Artikel 2</p>
               <div class="d-flex align-items-center">
@@ -1663,7 +1663,7 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan1.png')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan1.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
               <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
               <p class="fs-4">Artikel 3</p>
               <div class="d-flex align-items-center">
@@ -2244,7 +2244,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-12">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2F2xRcFHHF12djcGouFzDCrN14WcMt6REtAOFggzhVdDjrQ/viewform?embedded=true" width="auto" height="1566" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2F2xRcFHHF12djcGouFzDCrN14WcMt6REtAOFggzhVdDjrQ/viewform?embedded=true" width="100%" height="1566" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
         {{-- <div class="col-lg-7">
           <p class="text-center mb-4">Formulir untuk kerjasama dengan Kurirmoo.</p>
