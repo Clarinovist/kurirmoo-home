@@ -13,8 +13,11 @@ class CreateArtikelTable extends Migration
      */
     public function up()
     {
-        Schema::create('artikel', function (Blueprint $table) {
+        Schema::create('tb_artikel', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
+            $table->mediumText('desc');
+            $table->text('gambar')->nullable()->default(NULL);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateArtikelTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikel');
+        Schema::dropIfExists('tb_artikel');
     }
 }

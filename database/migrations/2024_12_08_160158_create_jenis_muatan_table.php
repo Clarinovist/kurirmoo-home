@@ -13,8 +13,11 @@ class CreateJenisMuatanTable extends Migration
      */
     public function up()
     {
-        Schema::create('jenis_muatan', function (Blueprint $table) {
+        Schema::create('tb_jenis_muatan', function (Blueprint $table) {
             $table->id();
+            $table->text('judul');
+            $table->mediumText('desc');
+            $table->string('icon');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateJenisMuatanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jenis_muatan');
+        Schema::dropIfExists('tb_jenis_muatan');
     }
 }

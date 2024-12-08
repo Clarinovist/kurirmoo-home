@@ -13,8 +13,11 @@ class CreateFaqTable extends Migration
      */
     public function up()
     {
-        Schema::create('faq', function (Blueprint $table) {
+        Schema::create('tb_faq', function (Blueprint $table) {
             $table->id();
+            $table->string('pertanyaan');
+            $table->Text('jawaban');
+            $table->string('kategori');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateFaqTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('faq');
+        Schema::dropIfExists('tb_faq');
     }
 }

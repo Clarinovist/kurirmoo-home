@@ -13,10 +13,10 @@ class CreateAboutUsTable extends Migration
      */
     public function up()
     {
-        Schema::create('about_us', function (Blueprint $table) {
+        Schema::create('tb_about_us', function (Blueprint $table) {
             $table->id();
             $table->text('judul');
-            $table->text('desc');
+            $table->mediumText('desc');
             $table->text('gambar')->nullable()->default(NULL);
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateAboutUsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('about_us');
+        Schema::dropIfExists('tb_about_us');
     }
 }

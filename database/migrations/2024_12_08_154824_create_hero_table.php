@@ -16,7 +16,7 @@ class CreateHeroTable extends Migration
         Schema::create('tb_hero', function (Blueprint $table) {
             $table->id();
             $table->text('judul');
-            $table->text('desc');
+            $table->mediumText('desc');
             $table->text('gambar')->nullable()->default(NULL);
             $table->timestamps();
         });

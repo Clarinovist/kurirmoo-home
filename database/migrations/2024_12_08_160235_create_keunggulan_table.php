@@ -13,8 +13,11 @@ class CreateKeunggulanTable extends Migration
      */
     public function up()
     {
-        Schema::create('keunggulan', function (Blueprint $table) {
+        Schema::create('tb_keunggulan', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->mediumText('desc');
+            $table->string('icon');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateKeunggulanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keunggulan');
+        Schema::dropIfExists('tb_keunggulan');
     }
 }
