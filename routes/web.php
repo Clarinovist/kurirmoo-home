@@ -19,19 +19,31 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [LandingpageController::class, 'index'])->name('home');
-
-// login
-Route::get('/login', [AuthenticatedSessionController::class, 'form_login'])->name('login');
-Route::middleware('guest')->post('/login', [AuthenticatedSessionController::class, 'login'])->name('login');
-Route::get('/logout', [AuthenticatedSessionController::class, 'logout'])->middleware('auth')->name('logout');
-
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
 // require __DIR__.'/auth.php';
 
-// Admin
 
+// Landing Page
+Route::get('/', [LandingpageController::class, 'index'])->name('home');
+
+
+// Landing Page
+
+
+
+
+// login
+Route::get('/login', [AuthenticatedSessionController::class, 'form_login'])->name('login');
+Route::middleware('guest')->post('/login', [AuthenticatedSessionController::class, 'login'])->name('login');
+Route::get('/logout', [AuthenticatedSessionController::class, 'logout'])->middleware('auth')->name('logout');
+// Admin
 Route::get('/home-admin', [HomeController::class, 'index'])->name('home-admin');
+
+
+
+
+
+
