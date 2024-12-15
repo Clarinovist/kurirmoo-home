@@ -34,7 +34,7 @@
           <h1 class="display-4 text-white mb-4 animated slideInRight">Kurirmoo<span class="text-dark">.</span></h1>
           <p class="text-white mb-4 animated slideInRight">YOUR DIGITAL LOGISTICS SOLUTION</p>
           <a href="#about-us" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Tentang kami</a>
-          <a href="#" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+          <a href="https://wa.me/62895341043230" target="_blank" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
         </div>
         <div class="col-lg-8 align-self-end text-center text-lg-end">
           <img class="img-fluid" src="{{ asset('assets_landingpage/img/img-hero.png')}}" alt="" width="auto" />
@@ -62,7 +62,7 @@
     </div> -->
   <!-- Full Screen Search End -->
 
-  <!-- Testimonial Start -->
+  <!-- Iklan Start -->
   <div class="container-xxl py-5">
     <div class="container py-5">
       <div class="row g-5">
@@ -85,7 +85,7 @@
   </div>
   </div>
   </div>
-  <!-- Testimonial End -->
+  <!-- Iklan End -->
 
   <!-- Tentang Kami Start -->
   <div class="container-fluid py-5" id="about-us">
@@ -117,14 +117,112 @@
             <!-- <a class="btn btn-danger rounded-pill px-4 me-3" href="">Read More</a> -->
             <a class="btn btn-outline-danger btn-square me-3" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
             <a class="btn btn-outline-danger btn-square me-3" href="https://www.youtube.com/channel/UCAFM4e005bvMjJnNPevSBeA" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-outline-danger btn-square me-3" href=""><i class="fab fa-google"></i></a>
-            <a class="btn btn-outline-danger btn-square " href=""><i class="fab fa-whatsapp"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href="kurirmoo.com"><i class="fab fa-google"></i></a>
+            <a class="btn btn-outline-danger btn-square " href="https://wa.me/62895341043230"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Tentang Kami End -->
+
+   <!-- Keunggulan Start -->
+   <div class="container-fluid bg-light mt-5 py-5" id="Keunggulan">
+    <div class="container py-5">
+      <div class="row g-5 align-items-center">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Keunggulan</div>
+          <h1 class="mb-4">Keunggulan Kurirmoo</h1>
+        </div>
+        <div class="col-lg-12">
+          <div class="row g-4">
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-truck fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 17px;">Beragam armada pengiriman
+                      </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Kami menyediakan berbagai macam armada yang dirancang untuk memenuhi kebutuhan logistik Anda dengan efisien dan terpercaya. Mulai dari  pick-up dan truk untuk muatan sedang, hingga armada besar seperti truk box dan kontainer untuk barang berukuran besar. Armada kami siap mendukung pengiriman Anda dengan standar keamanan tinggi dan dilengkapi teknologi GPS untuk memastikan ketepatan waktu.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-location-arrow fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 17px;">Real-Time Tracking & Digital Delivery
+                      </button>
+                    </h3>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Dapatkan akses penuh ke setiap pengiriman di mana saja dan kapan saja melalui platform kami yang dilengkapi teknologi pelacakan real-time. Transparansi dan akurasi adalah prioritas kami, memberi pelanggan ketenangan dalam proses pengiriman mereka.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="fa fa-sort fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 17px;">Seamless Logistics Platform
+                      </button>
+                    </h3>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Kami menyediakan satu platform yang mengintegrasikan semua layanan, mulai dari manajemen armada hingga laporan analitik.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row g-4">
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
+                    <div class="service-icon btn-square">
+                      <i class="bi bi-graph-up fa-2x"></i>
+                    </div>
+                    <h3 class="mb-3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 17px;">Logistics Advisory & Analytics
+                      </button>
+                    </h3>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                      <div class="accordion-body">
+                        Kami membantu Anda membuat keputusan berbasis data untuk setiap aspek rantai pasok. Layanan konsultasi kami memberikan wawasan strategis yang membantu bisnis Anda memaksimalkan efisiensi dan mengoptimalkan biaya.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Keunggulan End -->
 
   <!-- Jenis Muatan -->
   <div class="container-fluid bg-light mt-5 py-5">
@@ -161,7 +259,7 @@
                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                   <div class="service-item d-flex flex-column justify-content-center text-start rounded">
                     <div class="service-icon btn-square">
-                      <i class="bi bi-box fa-2x"></i>
+                        <i class="bi bi-archive fa-2x"></i>
                     </div>
                     <h3 class="mb-3">
                       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#karung" aria-expanded="false" aria-controls="karung" style="font-size: 17px;">Karung
@@ -352,110 +450,15 @@
           <br>
           <br>
           <br>
+          <br>
+          <br>
+          <br>
 
         </div>
       </div>
     </div>
   </div>
   <!-- jangkauan Area End -->
-
-  <!-- Keunggulan Start -->
-  <div class="container-fluid bg-light mt-5 py-5" id="Keunggulan">
-    <div class="container py-5">
-      <div class="row g-5 align-items-center">
-        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
-          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Keunggulan</div>
-          <h1 class="mb-4">Keunggulan Kurirmoo</h1>
-        </div>
-        <div class="col-lg-12">
-          <div class="row g-4">
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 17px;">Beragam armada pengiriman
-                      </button>
-                    </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Kami menyediakan berbagai macam armada yang dirancang untuk memenuhi kebutuhan logistik Anda dengan efisien dan terpercaya. Mulai dari  pick-up dan truk untuk muatan sedang, hingga armada besar seperti truk box dan kontainer untuk barang berukuran besar. Armada kami siap mendukung pengiriman Anda dengan standar keamanan tinggi dan dilengkapi teknologi GPS untuk memastikan ketepatan waktu.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-location-arrow fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 17px;">Real-Time Tracking & Digital Delivery
-                      </button>
-                    </h3>
-                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Dapatkan akses penuh ke setiap pengiriman di mana saja dan kapan saja melalui platform kami yang dilengkapi teknologi pelacakan real-time. Transparansi dan akurasi adalah prioritas kami, memberi pelanggan ketenangan dalam proses pengiriman mereka.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-sort fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 17px;">Seamless Logistics Platform
-                      </button>
-                    </h3>
-                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Kami menyediakan satu platform yang mengintegrasikan semua layanan, mulai dari manajemen armada hingga laporan analitik.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-graph-up fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 17px;">Logistics Advisory & Analytics
-                      </button>
-                    </h3>
-                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Kami membantu Anda membuat keputusan berbasis data untuk setiap aspek rantai pasok. Layanan konsultasi kami memberikan wawasan strategis yang membantu bisnis Anda memaksimalkan efisiensi dan mengoptimalkan biaya.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Keunggulan End -->
 
   <!-- Armada Start -->
   <div class="container-fluid mt-5 py-5" id="armada">
