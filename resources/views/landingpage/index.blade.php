@@ -93,15 +93,14 @@
       <div class="row g-5 align-items-center">
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
           <div class="about-img">
-            <img class="img-fluid" src="{{ asset('assets_landingpage/img/about.jpg')}}" />
+            <img class="img-fluid" src="{{ asset('storage/' . $about->gambar) }}" />
           </div>
         </div>
         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
           <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">About Us</div>
-          <h1 class="mb-4">KURIRMOO</h1>
+          <h1 class="mb-4">{{ $about->judul }}</h1>
           <p class="mb-4">
-            Menjadi perusahaan logistik digital terdepan di Indonesia yang berkomitmen untuk mentransformasi bisnis melalui solusi logistik yang cepat, transparan, dan berteknologi tinggi memberikan kemudahan bagi setiap bisnis untuk
-            berkembang dengan dukungan layanan logistik yang dapat diandalkan dan inovatif.
+            {!! $about->desc !!}
           </p>
           <div class="row g-3">
             <div class="col-sm-6">

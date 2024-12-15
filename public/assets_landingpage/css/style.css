@@ -147,7 +147,7 @@ h6,
 
     margin-top: -75px;
     /*background: url(../img/hero-back.png);*/
-    background: linear-gradient(#c50303, rgb(29, 1, 1)), url(../img/bg-hero.png);
+    background: linear-gradient(#c50303, rgb(29, 1, 1));
     height: 90vh;
     background-position: center center;
     background-repeat: no-repeat;
@@ -344,8 +344,7 @@ h6,
 
 /*** Newsletter ***/
 .newsletter {
-    background: linear-gradient(#c50303, rgb(29, 1, 1)),
-        url(../img/bg-hero.png) center center no-repeat;
+    background: linear-gradient(#c50303, rgb(29, 1, 1)), center center no-repeat;
     background-size: cover;
 }
 

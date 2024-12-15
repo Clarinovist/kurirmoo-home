@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LandingpageController;
@@ -32,17 +33,14 @@ Route::get('/privacy-policy', [LandingpageController::class, 'privacyPolicy'])->
 Route::get('/syarat-ketentuan', [LandingpageController::class, 'syaratketentuan'])->name('syaratketentuan');
 
 
-// Landing Page
-
-
-
-
 // login
 Route::get('/login', [AuthenticatedSessionController::class, 'form_login'])->name('login');
 Route::middleware('guest')->post('/login', [AuthenticatedSessionController::class, 'login'])->name('login');
 Route::get('/logout', [AuthenticatedSessionController::class, 'logout'])->middleware('auth')->name('logout');
 // Admin
 Route::get('/home-admin', [HomeController::class, 'index'])->name('home-admin');
+Route::get('/about-us-admin', [AboutController::class, 'index'])->name('AboutUs');
+Route::post('/ubah_about/{id}', [AboutController::class, 'ubah_about'])->name('ubah_about');
 
 
 

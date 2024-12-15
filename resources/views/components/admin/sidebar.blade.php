@@ -7,7 +7,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="/about-us-admin">
             <i class="mdi mdi-face-agent menu-icon"></i>
           <span class="menu-title">About Us</span>
         </a>

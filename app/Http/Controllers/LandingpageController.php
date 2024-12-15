@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use Illuminate\Http\Request;
 
 class LandingpageController extends Controller
 {
     public function index()
     {
-        return view('landingpage.index');
+        $about =  AboutUs::first();
+        return view('landingpage.index')->with(['about' => $about]);
     }
 
 
