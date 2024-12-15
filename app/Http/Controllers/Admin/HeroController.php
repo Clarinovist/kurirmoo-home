@@ -3,21 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\AboutUs;
+use App\Models\Hero;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 
-class AboutController extends Controller
+class HeroController extends Controller
 {
     public function index()
     {
-        $about =  AboutUs::first();
-        return view('admin.about_us.index')->with(['about' => $about]);
+        $hero =  Hero::first();
+        return view('admin.hero.hero')->with(['hero' => $hero]);
     }
 
-    public function ubah_about(Request $request , $id)
+    public function ubah_hero(Request $request , $id)
     {
         // dd($request->all());
         $validator = Validator::make($request->all(), [
@@ -32,30 +32,30 @@ class AboutController extends Controller
         }
 
          // Simpan ke database
-         AboutUs::where('id', $id)->update([
+         Hero::where('id', $id)->update([
             'judul' => $request->judul,
             'desc' => $request->desc,
         ]);
 
-        $dataAbout =  AboutUs::findOrFail($id);
+        $dataHero =  Hero::findOrFail($id);
         // Cek apakah ada file gambar baru
         if ($request->hasFile('gambar')) {
             // Hapus gambar lama jika ada
-            if ($dataAbout->gambar) {
-                Storage::disk('public')->delete($dataAbout->gambar);
+            if ($dataHero->gambar) {
+                Storage::disk('public')->delete($dataHero->gambar);
             }
 
             // Simpan file baru di direktori 'public/berita' dan dapatkan path
-            $path = $request->file('gambar')->store('about_us', 'public');
+            $path = $request->file('gambar')->store('Hero', 'public');
 
             // Update kolom 'image' dengan path baru
-            $dataAbout->gambar = $path;
+            $dataHero->gambar = $path;
 
         }
         // Simpan perubahan ke database (baik ada atau tidak ada gambar baru)
-        $dataAbout->save();
+        $dataHero->save();
 
-        toast('Data About Berhasil Diubah','success');
-        return redirect('/about-us-admin');
+        toast('Data Hero Berhasil Diubah','success');
+        return redirect('/hero-admin');
     }
 }

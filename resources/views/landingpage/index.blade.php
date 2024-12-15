@@ -31,13 +31,14 @@
       <div class="row g-5 pt-5">
         <div class="col-lg-4 align-self-center text-center text-lg-start mb-lg-5">
           <div class="btn btn-sm border rounded-pill text-white px-3 mb-3 animated slideInRight">Kurirmoo</div>
-          <h1 class="display-4 text-white mb-4 animated slideInRight">Kurirmoo<span class="text-dark">.</span></h1>
-          <p class="text-white mb-4 animated slideInRight">YOUR DIGITAL LOGISTICS SOLUTION</p>
+          <h1 class="display-4 text-white mb-4 animated slideInRight">{{ $hero->judul }}<span class="text-dark">.</span></h1>
+          {{-- <p class="text-white mb-4 animated slideInRight">{!! $hero->desc !!}</p> --}}
+          <h5 class="text-white mb-4">{!! $hero->desc !!}</h5>
           <a href="#about-us" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Tentang kami</a>
           <a href="https://wa.me/62895341043230" target="_blank" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
         </div>
         <div class="col-lg-8 align-self-end text-center text-lg-end">
-          <img class="img-fluid" src="{{ asset('assets_landingpage/img/img-hero.png')}}" alt="" width="auto" />
+          <img class="img-fluid" src="{{ asset('storage/' . $hero->gambar) }}" alt="" width="auto" />
         </div>
       </div>
     </div>
@@ -69,16 +70,20 @@
       </div>
       <div class="col-lg-12 wow fadeIn" data-wow-delay="0.5s">
         <div class="owl-carousel testimonial-carousel border-start border-danger">
+        @foreach ($iklan as $no => $valueIklan)
           <div class="testimonial-item ps-5">
+            <div class="d-flex align-items-center">
+                <a href="{{ $valueIklan->link }}">
+                    <img src="{{ asset('storage/' . $valueIklan->gambar) }}" class="d-block w-100" alt="..." width="auto" height="600px">
+                </a>
+            </div>
+          </div>
+          @endforeach
+          {{-- <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
               <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="600px">
             </div>
-          </div>
-          <div class="testimonial-item ps-5">
-            <div class="d-flex align-items-center">
-              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="600px">
-            </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -135,86 +140,28 @@
         </div>
         <div class="col-lg-12">
           <div class="row g-4">
+            @foreach ($keunggulan as $no => $valueKeunggulan)
             <div class="col-md-3">
               <div class="row g-4">
                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                   <div class="service-item d-flex flex-column justify-content-center text-start rounded">
                     <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-2x"></i>
+                      <i class="{{ $valueKeunggulan->icon }}"></i>
                     </div>
                     <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size: 17px;">Beragam armada pengiriman
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $valueKeunggulan->id }}" aria-expanded="false" aria-controls="collapseOne{{ $valueKeunggulan->id }}" style="font-size: 17px;">{{ $valueKeunggulan->nama }}
                       </button>
                     </h3>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Kami menyediakan berbagai macam armada yang dirancang untuk memenuhi kebutuhan logistik Anda dengan efisien dan terpercaya. Mulai dari  pick-up dan truk untuk muatan sedang, hingga armada besar seperti truk box dan kontainer untuk barang berukuran besar. Armada kami siap mendukung pengiriman Anda dengan standar keamanan tinggi dan dilengkapi teknologi GPS untuk memastikan ketepatan waktu.
+                    <div id="collapseOne{{ $valueKeunggulan->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#collapseOne{{ $valueKeunggulan->id }}" >
+                      <div class="accordion-body"  style="color: white;">
+                        {!! $valueKeunggulan->desc !!}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-location-arrow fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2" style="font-size: 17px;">Real-Time Tracking & Digital Delivery
-                      </button>
-                    </h3>
-                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Dapatkan akses penuh ke setiap pengiriman di mana saja dan kapan saja melalui platform kami yang dilengkapi teknologi pelacakan real-time. Transparansi dan akurasi adalah prioritas kami, memberi pelanggan ketenangan dalam proses pengiriman mereka.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-sort fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3" style="font-size: 17px;">Seamless Logistics Platform
-                      </button>
-                    </h3>
-                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Kami menyediakan satu platform yang mengintegrasikan semua layanan, mulai dari manajemen armada hingga laporan analitik.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-graph-up fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4" style="font-size: 17px;">Logistics Advisory & Analytics
-                      </button>
-                    </h3>
-                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Kami membantu Anda membuat keputusan berbasis data untuk setiap aspek rantai pasok. Layanan konsultasi kami memberikan wawasan strategis yang membantu bisnis Anda memaksimalkan efisiensi dan mengoptimalkan biaya.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
 
           </div>
         </div>
