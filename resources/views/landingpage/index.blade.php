@@ -225,7 +225,7 @@
   <!-- Keunggulan End -->
 
   <!-- Jenis Muatan -->
-  <div class="container-fluid bg-light mt-5 py-5">
+  <div class="container-fluid mt-5 py-5">
     <div class="container py-5">
       <div class="row g-5 align-items-center">
         <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
@@ -425,6 +425,44 @@
   </div>
   <!-- Jenis Muatan -->
 
+   <!-- Artikel Slide -->
+   <div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
+          <div class="owl-carousel testimonial-carousel border-start border-primary">
+            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
+              <p class="fs-4">Artikel 1</p>
+              <div class="d-flex align-items-center">
+                <div class="ps-3">
+                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
+              <p class="fs-4">Artikel 2</p>
+              <div class="d-flex align-items-center">
+                <div class="ps-3">
+                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Artikel</div>
+          <h1 class="mb-4">Artikel</h1>
+          <p class="mb-4">Beberapa Artikel Kurirmoo</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Artikel Slide -->
+
   <!-- jangkauan Area Start -->
   <div class="container-fluid feature pt-5 text-center" style="background-color: #c50303;">
     <div class="container mb-2">
@@ -461,7 +499,7 @@
   <!-- jangkauan Area End -->
 
   <!-- Armada Start -->
-  <div class="container-fluid mt-5 py-5" id="armada">
+  <div class="container-fluid bg-light mt-5 py-5" id="armada">
     <div class="container py-5">
       <div class="row g-5 align-items-center">
         <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px">
@@ -1642,43 +1680,6 @@
   </div>
   <!-- Armada End -->
 
-  <!-- Artikel Slide -->
-  <div class="container-xxl py-5">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
-          <div class="owl-carousel testimonial-carousel border-start border-primary">
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-              <p class="fs-4">Artikel 1</p>
-              <div class="d-flex align-items-center">
-                <div class="ps-3">
-                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-              <p class="fs-4">Artikel 2</p>
-              <div class="d-flex align-items-center">
-                <div class="ps-3">
-                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-          <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Artikel</div>
-          <h1 class="mb-4">Artikel</h1>
-          <p class="mb-4">Beberapa Artikel Kurirmoo</p>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- Artikel Slide -->
 
   <!-- FAQs  -->
   <div class="container-fluid py-5">
