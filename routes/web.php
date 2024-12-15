@@ -42,6 +42,7 @@ Route::get('/login', [AuthenticatedSessionController::class, 'form_login'])->nam
 Route::middleware('guest')->post('/login', [AuthenticatedSessionController::class, 'login'])->name('login');
 Route::get('/logout', [AuthenticatedSessionController::class, 'logout'])->middleware('auth')->name('logout');
 // Admin
+Route::middleware(['admin.auth'])->group(function () {
 Route::get('/home-admin', [HomeController::class, 'index'])->name('home-admin');
 
 // Hero
@@ -68,7 +69,4 @@ Route::delete('/hapus_keunggulan/{id}', [KeunggulanController::class, 'hapus_keu
 Route::get('/kontak-admin', [KontakController::class, 'index'])->name('kontak');
 Route::post('/ubah_kontak/{id}', [KontakController::class, 'ubah_kontak'])->name('ubah_kontak');
 
-
-
-
-
+});
