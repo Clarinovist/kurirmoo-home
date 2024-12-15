@@ -6,6 +6,7 @@ use App\Models\AboutUs;
 use App\Models\Hero;
 use App\Models\Iklan;
 use App\Models\Keunggulan;
+use App\Models\Kontak;
 use Illuminate\Http\Request;
 
 class LandingpageController extends Controller
@@ -16,7 +17,8 @@ class LandingpageController extends Controller
         $iklan =  Iklan::all();
         $keunggulan =  Keunggulan::all();
         $hero =  Hero::first();
-        return view('landingpage.index')->with(['about' => $about, 'iklan' => $iklan, 'keunggulan' => $keunggulan, 'hero' => $hero]);
+        $kontak =  Kontak::first();
+        return view('landingpage.index')->with(['about' => $about, 'iklan' => $iklan, 'keunggulan' => $keunggulan, 'hero' => $hero, 'kontak' => $kontak]);
     }
 
 

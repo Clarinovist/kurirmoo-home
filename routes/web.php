@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\IklanController;
 use App\Http\Controllers\Admin\KeunggulanController;
+use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LandingpageController;
 use Illuminate\Support\Facades\Route;
@@ -62,6 +63,10 @@ Route::get('/keunggulan-admin', [KeunggulanController::class, 'index'])->name('k
 Route::post('/tambah_keunggulan', [KeunggulanController::class, 'tambah_keunggulan'])->name('tambah_keunggulan');
 Route::post('/ubah_keunggulan/{id}', [KeunggulanController::class, 'ubah_keunggulan'])->name('ubah_keunggulan');
 Route::delete('/hapus_keunggulan/{id}', [KeunggulanController::class, 'hapus_keunggulan'])->name('hapus_keunggulan');
+
+// Kontak
+Route::get('/kontak-admin', [KontakController::class, 'index'])->name('kontak');
+Route::post('/ubah_kontak/{id}', [KontakController::class, 'ubah_kontak'])->name('ubah_kontak');
 
 
 

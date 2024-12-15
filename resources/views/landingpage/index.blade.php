@@ -1,4 +1,4 @@
-<x-landingpage.app>
+<x-landingpage.app >
      <!-- Hero Start -->
 
      {{-- <head>
@@ -35,7 +35,7 @@
           {{-- <p class="text-white mb-4 animated slideInRight">{!! $hero->desc !!}</p> --}}
           <h5 class="text-white mb-4">{!! $hero->desc !!}</h5>
           <a href="#about-us" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight">Tentang kami</a>
-          <a href="https://wa.me/62895341043230" target="_blank" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+          <a href="https://wa.me/{{$kontak->no_hp}}" target="_blank" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
         </div>
         <div class="col-lg-8 align-self-end text-center text-lg-end">
           <img class="img-fluid" src="{{ asset('storage/' . $hero->gambar) }}" alt="" width="auto" />
@@ -120,9 +120,9 @@
           <div class="d-flex align-items-center mt-4">
             <!-- <a class="btn btn-danger rounded-pill px-4 me-3" href="">Read More</a> -->
             <a class="btn btn-outline-danger btn-square me-3" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a class="btn btn-outline-danger btn-square me-3" href="https://www.youtube.com/channel/UCAFM4e005bvMjJnNPevSBeA" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-outline-danger btn-square me-3" href="kurirmoo.com"><i class="fab fa-google"></i></a>
-            <a class="btn btn-outline-danger btn-square " href="https://wa.me/62895341043230"><i class="fab fa-whatsapp"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href="{{ $kontak->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href="mailto:{{ $kontak->email }}"><i class="fa fa-envelope"></i></a>
+            <a class="btn btn-outline-danger btn-square " href="https://wa.me/{{ $kontak->no_wa }}"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -2258,5 +2258,46 @@
   </div>
   <!-- Form End -->
 
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer pt-5" id="footer">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+          <a href="/" class="d-inline-block mb-3">
+            <h1 class="text-white">Kurirmoo<span class="text-primary">.</span></h1>
+          </a>
+          <p class="mb-0">YOUR DIGITAL LOGISTICS SOLUTION</p>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn float-end" data-wow-delay="0.3s">
+          <h5 class="text-white mb-4">Informasi</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>{{ $kontak->alamat }}</p>
+          <p><i class="fa fa-phone-alt me-3"></i>{{ $kontak->no_hp }}</p>
+          <p><i class="fa fa-envelope me-3"></i>{{ $kontak->email }}</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href="{{ $kontak->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href="{{ $kontak->instagram }}"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-social " href="https://wa.me/{{ $kontak->no_hp }}" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <h5 class="text-white mb-4">Popular Link</h5>
+          <a class="btn btn-link" href="#about-us">About Us</a>
+          <a class="btn btn-link" href="/privacy-policy" >Privacy Policy</a>
+          <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.jpg')}}" alt="" width="600px" />
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Kurirmoo 2024</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
 </x-landingpage.app>
 

@@ -89,4 +89,45 @@
         </div>
     </div>
 
+    <!-- Footer Start -->
+   <div class="container-fluid bg-dark text-white-50 footer pt-5" id="footer">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+          <a href="/" class="d-inline-block mb-3">
+            <h1 class="text-white">Kurirmoo<span class="text-primary">.</span></h1>
+          </a>
+          <p class="mb-0">YOUR DIGITAL LOGISTICS SOLUTION</p>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn float-end" data-wow-delay="0.3s">
+          <h5 class="text-white mb-4">Informasi</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>{{ $kontak->alamat }}</p>
+          <p><i class="fa fa-phone-alt me-3"></i>{{ $kontak->no_hp }}</p>
+          <p><i class="fa fa-envelope me-3"></i>{{ $kontak->email }}</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href="{{ $kontak->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href="{{ $kontak->instagram }}"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-social " href="https://wa.me/{{ $kontak->no_hp }}" target="_blank"> <i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <h5 class="text-white mb-4">Popular Link</h5>
+          <a class="btn btn-link" href="#about-us">About Us</a>
+          <a class="btn btn-link" href="/privacy-policy" >Privacy Policy</a>
+          <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
+        </div>
+        <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.jpg')}}" alt="" width="600px" />
+        </div>
+      </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Kurirmoo 2024</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
     </x-landingpage.app>
