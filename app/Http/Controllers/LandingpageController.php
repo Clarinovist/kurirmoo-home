@@ -24,10 +24,12 @@ class LandingpageController extends Controller
 
     public function privacyPolicy()
     {
-        return view('landingpage.privacy_policy.privacy_policy');
+        $kontak =  Kontak::first();
+        return view('landingpage.privacy_policy.privacy_policy')->with(['kontak' => $kontak]);
     }
     public function syaratKetentuan()
     {
-        return view('landingpage.syarat_ketentuan.syarat_ketentuan');
+        $kontak =  Kontak::first();
+        return view('landingpage.syarat_ketentuan.syarat_ketentuan')->with(['kontak' => $kontak]);
     }
 }
