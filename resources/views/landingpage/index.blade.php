@@ -71,12 +71,12 @@
         <div class="owl-carousel testimonial-carousel border-start border-danger">
           <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
-              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="400px">
+              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="600px">
             </div>
           </div>
           <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
-              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="400px">
+              <img src="{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}" class="d-block w-100" alt="..." width="auto" height="600px">
             </div>
           </div>
         </div>
@@ -336,23 +336,23 @@
           <h1 class="mb-4 text-white">Jangkauan Area</h1>
         </div>
         <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
-          <h2 class="text-dark mb-4">Jawa Timur</h2>
+          {{-- <h2 class="text-dark mb-4">Jawa Timur</h2>
           <div class="text-white mb-2">Surabaya</div>
           <div class="text-white mb-2">Kediri</div>
           <div class="text-white mb-2">Malang</div>
-          <div class="text-white mb-2">Mojokerto</div>
-        </div>
-        <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
-          <h2 class="text-dark mb-4">Jawa Tengah</h2>
-          <div class="text-white mb-2">Solo</div>
-          <div class="text-white mb-2">Semarang</div>
-          <div class="text-white mb-2">Blora</div>
-        </div>
-        <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
-          <h2 class="text-dark mb-4">Jawa Barat</h2>
-          <div class="text-white mb-2">Bandung</div>
-          <div class="text-white mb-2">Cirebon</div>
-          <div class="text-white mb-2">Purwakarta</div>
+          <div class="text-white mb-2">Mojokerto</div> --}}
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
         </div>
       </div>
     </div>
@@ -1663,15 +1663,6 @@
                 </div>
               </div>
             </div>
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan1.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-              <p class="fs-4">Artikel 3</p>
-              <div class="d-flex align-items-center">
-                <div class="ps-3">
-                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
         <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
@@ -1832,7 +1823,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan2" aria-expanded="false" aria-controls="collapse3">2.	Apa keunggulan bekerja sama dengan Kurirmoo?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan2" aria-expanded="false" aria-controls="collapse3">Apa keunggulan bekerja sama dengan Kurirmoo?</button>
               </h2>
               <div id="muatan2" class="accordion-collapse collapse" aria-labelledby="headingmuatan2" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1844,7 +1835,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan3" aria-expanded="false" aria-controls="collapse3">3.	Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan3" aria-expanded="false" aria-controls="collapse3">Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
               </h2>
               <div id="muatan3" class="accordion-collapse collapse" aria-labelledby="headingmuatan3" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1856,7 +1847,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan4" aria-expanded="false" aria-controls="collapse3">4.	Berapa lama jangka waktu kerja sama yang ditawarkan?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan4" aria-expanded="false" aria-controls="collapse3">Berapa lama jangka waktu kerja sama yang ditawarkan?</button>
               </h2>
               <div id="muatan4" class="accordion-collapse collapse" aria-labelledby="headingmuatan4" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1868,7 +1859,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan5" aria-expanded="false" aria-controls="collapse3">5.	Apakah Kurirmoo memberikan layanan eksklusif untuk mitra perusahaan?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan5" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo memberikan layanan eksklusif untuk mitra perusahaan?</button>
               </h2>
               <div id="muatan5" class="accordion-collapse collapse" aria-labelledby="headingmuatan5" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1880,7 +1871,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan6" aria-expanded="false" aria-controls="collapse6">6.	Bagaimana sistem pembayaran untuk layanan kerja sama ini?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan6" aria-expanded="false" aria-controls="collapse6">Bagaimana sistem pembayaran untuk layanan kerja sama ini?</button>
               </h2>
               <div id="muatan6" class="accordion-collapse collapse" aria-labelledby="headingmuatan6" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1892,7 +1883,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan7">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan7" aria-expanded="false" aria-controls="collapse3">7.	Apakah Kurirmoo menyediakan asuransi untuk barang yang dikirim?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan7" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan asuransi untuk barang yang dikirim?</button>
               </h2>
               <div id="muatan7" class="accordion-collapse collapse" aria-labelledby="headingmuatan7" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
@@ -1904,7 +1895,7 @@
           <div class="accordion" id="accordionFAQ1">
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingmuatan8">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan8" aria-expanded="false" aria-controls="collapse3">8.	Bagaimana mekanisme pelaporan pengiriman untuk mitra perusahaan?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan8" aria-expanded="false" aria-controls="collapse3">Bagaimana mekanisme pelaporan pengiriman untuk mitra perusahaan?</button>
               </h2>
               <div id="muatan8" class="accordion-collapse collapse" aria-labelledby="headingmuatan8" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">

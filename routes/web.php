@@ -28,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 
 // Landing Page
 Route::get('/', [LandingpageController::class, 'index'])->name('home');
+Route::get('/privacy-policy', [LandingpageController::class, 'privacyPolicy'])->name('privacyPolicy');
+Route::get('/syarat-ketentuan', [LandingpageController::class, 'syaratketentuan'])->name('syaratketentuan');
 
 
 // Landing Page

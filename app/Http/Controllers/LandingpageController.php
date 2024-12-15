@@ -10,4 +10,14 @@ class LandingpageController extends Controller
     {
         return view('landingpage.index');
     }
+
+
+    public function privacyPolicy()
+    {
+        return view('landingpage.privacy_policy.privacy_policy');
+    }
+    public function syaratKetentuan()
+    {
+        return view('landingpage.syarat_ketentuan.syarat_ketentuan');
+    }
 }

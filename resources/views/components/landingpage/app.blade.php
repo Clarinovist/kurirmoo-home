@@ -148,7 +148,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <div class="navbar-nav ms-auto">
-            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="/" class="nav-item nav-link active">Home</a>
             <a href="#about-us" class="nav-item nav-link">Tentang Kami</a>
             <a href="#Keunggulan" class="nav-item nav-link">Keunggulan</a>
             <a href="#armada" class="nav-item nav-link">Armada</a>
@@ -176,32 +176,31 @@
           <p class="mb-0">YOUR DIGITAL LOGISTICS SOLUTION</p>
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn float-end" data-wow-delay="0.3s">
-          <h5 class="text-white mb-4">Alamat</h5>
-          <p><i class="fa fa-map-marker-alt me-3"></i>Surakarta</p>
-          <p><i class="fa fa-phone-alt me-3"></i>089534103230</p>
+          <h5 class="text-white mb-4">Informasi</h5>
+          <p><i class="fa fa-map-marker-alt me-3"></i>Surakarta, Indonesia</p>
+          <p><i class="fa fa-phone-alt me-3"></i>0895341043230</p>
           <p><i class="fa fa-envelope me-3"></i>admin@kurirmoo.com</p>
           <div class="d-flex pt-2">
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-google"></i></a>
-            <a class="btn btn-outline-light btn-social " href=""><i class="fab fa-whatsapp"></i></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@kurirmoo" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-social " href="https://wa.me/62895341043230" target="_blank"> <i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
           <h5 class="text-white mb-4">Popular Link</h5>
           <a class="btn btn-link" href="#about-us">About Us</a>
-          <a class="btn btn-link" href="{{ asset('assets_landingpage/img/docs/Kebijakan Privasi.pdf')}}" download="Privacy Polish Kurirmoo" target="_blank">Privacy Policy</a>
-          <a class="btn btn-link" href="{{ asset('assets_landingpage/img/docs/S&K_Kurirmoo.pdf')}}" download="SK Kurirmoo" target="_blank">Syarat dan Ketentuan</a>
+          <a class="btn btn-link" href="/privacy-policy" >Privacy Policy</a>
+          <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.png')}}" alt="" width="600px" />
+          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.jpg')}}" alt="" width="600px" />
         </div>
       </div>
     </div>
     <div class="container wow fadeIn" data-wow-delay="0.1s">
       <div class="copyright">
         <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Kurirmoo</a></div>
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">&copy; <a class="border-bottom" href="#">Kurirmoo 2024</a></div>
         </div>
       </div>
     </div>
