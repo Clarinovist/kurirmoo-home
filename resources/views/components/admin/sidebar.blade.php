@@ -37,6 +37,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/tutorial-admin">
+            <i class="mdi mdi-card-account-phone-outline menu-icon"></i>
+          <span class="menu-title">Tutorial Aplikasi</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="mdi mdi-account-key menu-icon"></i>
           <span class="menu-title">Users</span>

@@ -6,8 +6,10 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\IklanController;
 use App\Http\Controllers\Admin\KeunggulanController;
 use App\Http\Controllers\Admin\KontakController;
+use App\Http\Controllers\Admin\TutorialController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\LandingpageController;
+use App\Models\Tutorial;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -69,4 +71,9 @@ Route::delete('/hapus_keunggulan/{id}', [KeunggulanController::class, 'hapus_keu
 Route::get('/kontak-admin', [KontakController::class, 'index'])->name('kontak');
 Route::post('/ubah_kontak/{id}', [KontakController::class, 'ubah_kontak'])->name('ubah_kontak');
 
+// Tutorial
+Route::get('/tutorial-admin', [TutorialController::class, 'index'])->name('tutorial');
+Route::post('/tambah_tutorial', [TutorialController::class, 'tambah_tutorial'])->name('tambah_tutorial');
+Route::post('/ubah_tutorial/{id}', [TutorialController::class, 'ubah_tutorial'])->name('ubah_tutorial');
+Route::delete('/hapus_tutorial/{id}', [TutorialController::class, 'hapus_tutorial'])->name('hapus_tutorial');
 });

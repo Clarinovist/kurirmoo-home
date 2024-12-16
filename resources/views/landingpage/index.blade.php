@@ -74,7 +74,7 @@
           <div class="testimonial-item ps-5">
             <div class="d-flex align-items-center">
                 <a href="{{ $valueIklan->link }}">
-                    <img src="{{ asset('storage/' . $valueIklan->gambar) }}" class="d-block w-100" alt="..." width="auto" height="600px">
+                    <img src="{{ asset('storage/' . $valueIklan->gambar) }}" class="d-block w-100" alt="..." width="auto" height="auto">
                 </a>
             </div>
           </div>
@@ -2174,12 +2174,15 @@
         <h1 class="mb-4">Tutorial Aplikasi Kurirmoo</h1>
       </div>
       <div class="row justify-content-center">
+        @foreach ($tutorial as $no => $valueTutorial)
         <div class="col-lg-4 mb-4">
           <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/hoe1J55ZpN0?si=l6Gjvc2KJs_58fXx" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="{{ $valueTutorial->link_youtube }}" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
+        @endforeach
+
+        {{-- <div class="col-lg-4 mb-4">
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/vD-m0VkxeHg?si=ufk2coZiA3EnisHt" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
@@ -2198,7 +2201,7 @@
           <div class="video-container">
             <iframe src="https://www.youtube.com/embed/EO2niaXWW0Y?si=tzPdiw5Pyf3WAuJs" frameborder="0" width="460" height="215" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>
@@ -2214,6 +2217,7 @@
         <h1 class="mb-4">Kerjasama</h1>
       </div>
       <div class="row justify-content-center">
+
         <div class="col-lg-12">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc2F2xRcFHHF12djcGouFzDCrN14WcMt6REtAOFggzhVdDjrQ/viewform?embedded=true" width="100%" height="1566" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
