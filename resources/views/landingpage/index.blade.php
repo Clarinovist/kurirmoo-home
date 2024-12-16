@@ -1667,116 +1667,18 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="accordion" id="accordionFAQ1">
+            @foreach ($faqgeneral as $no => $valueGeneral)
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Apa itu Kurirmoo?</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $valueGeneral->id }}" aria-expanded="false" aria-controls="collapseOne">{{ $valueGeneral->pertanyaan }}</button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
+              <div id="collapseOne{{ $valueGeneral->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
-                  Kurirmoo adalah aplikasi digital logistik yang menawarkan layanan ekspedisi dan pengiriman barang dengan berbagai pilihan armada, mulai dari motor hingga truk besar. Kami memberikan solusi logistik cepat, aman, dan terpercaya.
+                    {!! $valueGeneral->jawaban !!}
                 </div>
               </div>
             </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Layanan apa saja yang tersedia di Kurirmoo?</button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami menyediakan layanan pengiriman barang untuk kebutuhan individu maupun bisnis, pengangkutan muatan besar, layanan antar-jemput barang, dan pelacakan pengiriman secara real-time melalui GPS.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Bagaimana cara menggunakan layanan Kurirmoo?</button>
-              </h2>
-              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Anda cukup mengunduh aplikasi Kurirmoo, membuat akun, memilih layanan yang sesuai, memasukkan detail pengiriman, dan tim kami akan segera memproses permintaan Anda.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Jenis barang apa saja yang bisa dikirim melalui Kurirmoo?</button>
-              </h2>
-              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami melayani pengiriman berbagai jenis barang, kecuali barang berbahaya, ilegal, atau barang yang melanggar aturan hukum yang berlaku.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Apakah barang yang dikirim melalui Kurirmoo diasuransikan?</button>
-              </h2>
-              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami menawarkan opsi asuransi pengiriman untuk memastikan keamanan barang Anda. Nilai dan syarat asuransi akan disesuaikan berdasarkan kesepakatan.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading6">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="heading3">Apakah Kurirmoo melayani pengiriman di luar kota atau antar pulau?</button>
-              </h2>
-              <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami melayani pengiriman ke berbagai daerah, termasuk antar kota dan antar pulau, dengan pilihan armada yang sesuai dengan kebutuhan Anda.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading7">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse3">Bagaimana cara melacak pengiriman saya?</button>
-              </h2>
-              <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Anda dapat melacak pengiriman secara real-time melalui aplikasi Kurirmoo. Informasi pelacakan akan tersedia di halaman pengiriman Anda.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading8">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan layanan untuk mitra bisnis?</button>
-              </h2>
-              <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Tentu! Kami memiliki program kerja sama dengan mitra bisnis untuk memenuhi kebutuhan logistik skala besar, termasuk layanan khusus dan laporan pengiriman berkala. Hubungi kami untuk informasi lebih lanjut.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading9">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse3">Bagaimana cara melaporkan masalah atau keluhan?</button>
-              </h2>
-              <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Jika Anda mengalami masalah, Anda dapat menghubungi tim kami melalui email di admin@kurirmoo.com atau melalui formulir kontak yang tersedia di website dan aplikasi kami.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading10">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse3">Apa keunggulan Kurirmoo dibanding layanan logistik lainnya?</button>
-              </h2>
-              <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kurirmoo menawarkan fleksibilitas armada, pengiriman cepat, layanan pelanggan responsif, dan pelacakan real-time. Melalui aplikasi Kurirmoo, atur pengiriman, pilih rute, dan lacak semua kebutuhan logistik Anda hanya dalam beberapa klik. Semuanya dirancang untuk memberikan pengalaman logistik terbaik bagi pelanggan.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
-              <h2 class="accordion-header" id="heading11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse3">Bagaimana cara mendaftar sebagai mitra pengemudi di Kurirmoo?</button>
-              </h2>
-              <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Untuk menjadi mitra pengemudi, Anda dapat mendaftar melalui aplikasi atau website kami. Lengkapi dokumen yang diperlukan, dan tim kami akan memproses aplikasi Anda secepatnya.
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
         </div>
       </div>
@@ -1788,174 +1690,24 @@
       </div>
       <div class="row">
         <div class="col-lg-12">
+
           <div class="accordion" id="accordionFAQ1">
+
+            @foreach ($faqmuatan as $no => $valueMuatan)
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan1" aria-expanded="false" aria-controls="collapse3">Apa saja jenis kerja sama yang ditawarkan Kurirmoo kepada perusahaan besar??</button>
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $valueMuatan->id }}" aria-expanded="false" aria-controls="collapseOne">{{ $valueMuatan->pertanyaan }}</button>
               </h2>
-              <div id="muatan1" class="accordion-collapse collapse" aria-labelledby="headingmuatan1" data-bs-parent="#accordionFAQ1">
+              <div id="collapseOne{{ $valueMuatan->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
-                  Kurirmoo menawarkan layanan kerja sama logistik, termasuk pengangkutan muatan reguler, layanan ekspedisi khusus, laporan pengiriman berkala, dan pengelolaan logistik terintegrasi untuk mendukung kebutuhan operasional perusahaan.
+                    {!! $valueMuatan->jawaban !!}
                 </div>
               </div>
             </div>
+            @endforeach
+
           </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan2" aria-expanded="false" aria-controls="collapse3">Apa keunggulan bekerja sama dengan Kurirmoo?</button>
-              </h2>
-              <div id="muatan2" class="accordion-collapse collapse" aria-labelledby="headingmuatan2" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami menawarkan armada yang beragam, pengiriman cepat dan aman, fleksibilitas jadwal, laporan pengiriman yang transparan, serta teknologi pelacakan real-time melalui GPS dan aplikasi.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan3" aria-expanded="false" aria-controls="collapse3">Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
-              </h2>
-              <div id="muatan3" class="accordion-collapse collapse" aria-labelledby="headingmuatan3" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Hubungi tim kami melalui email di admin@kurirmoo.com atau formulir kontak di website untuk mendiskusikan kebutuhan Anda. Setelah diskusi awal, kami akan menyediakan dokumen kerja sama dan memulai perjanjian resmi.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan4" aria-expanded="false" aria-controls="collapse3">Berapa lama jangka waktu kerja sama yang ditawarkan?</button>
-              </h2>
-              <div id="muatan4" class="accordion-collapse collapse" aria-labelledby="headingmuatan4" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Standar jangka waktu kerja sama kami adalah 6 bulan, namun durasi dapat disesuaikan berdasarkan kebutuhan perusahaan Anda.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan5" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo memberikan layanan eksklusif untuk mitra perusahaan?</button>
-              </h2>
-              <div id="muatan5" class="accordion-collapse collapse" aria-labelledby="headingmuatan5" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami menyediakan layanan eksklusif untuk mitra perusahaan, termasuk armada khusus, jadwal yang disesuaikan, dan prioritas layanan.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan6" aria-expanded="false" aria-controls="collapse6">Bagaimana sistem pembayaran untuk layanan kerja sama ini?</button>
-              </h2>
-              <div id="muatan6" class="accordion-collapse collapse" aria-labelledby="headingmuatan6" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Sistem pembayaran dilakukan 10 hari setelah invoice diterima. Ketentuan ini dapat dinegosiasikan lebih lanjut sesuai kebutuhan perusahaan Anda.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan7">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan7" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan asuransi untuk barang yang dikirim?</button>
-              </h2>
-              <div id="muatan7" class="accordion-collapse collapse" aria-labelledby="headingmuatan7" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami menyediakan opsi asuransi barang yang nilainya akan disesuaikan dengan kesepakatan antara Kurirmoo dan perusahaan mitra.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan8">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan8" aria-expanded="false" aria-controls="collapse3">Bagaimana mekanisme pelaporan pengiriman untuk mitra perusahaan?</button>
-              </h2>
-              <div id="muatan8" class="accordion-collapse collapse" aria-labelledby="headingmuatan8" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami menyediakan laporan pengiriman secara berkala atau berdasarkan permintaan pemilik muatan. Laporan ini mencakup informasi lengkap tentang status pengiriman dan dokumentasi terkait.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan9">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan9" aria-expanded="false" aria-controls="collapse3">Bagaimana Kurirmoo menangani kondisi force majeure atau keterlambatan pengiriman?</button>
-              </h2>
-              <div id="muatan9" class="accordion-collapse collapse" aria-labelledby="headingmuatan9" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Dalam kondisi di luar kendali, seperti force majeure, kami akan berkoordinasi langsung dengan perusahaan mitra untuk mencari solusi terbaik sesuai kesepakatan.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan10">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan10" aria-expanded="false" aria-controls="collapse3">Apa jenis barang yang dapat diangkut oleh Kurirmoo dalam kerja sama ini?</button>
-              </h2>
-              <div id="muatan10" class="accordion-collapse collapse" aria-labelledby="headingmuatan10" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami melayani pengangkutan berbagai jenis barang kecuali barang berbahaya atau yang melanggar hukum. Jenis barang yang spesifik dapat dibahas lebih lanjut dalam perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan11" aria-expanded="false" aria-controls="collapse3">Apakah Kurirmoo menyediakan layanan antar jemput barang?</button>
-              </h2>
-              <div id="muatan11" class="accordion-collapse collapse" aria-labelledby="headingmuatan11" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, layanan antar jemput disesuaikan dengan jadwal dan lokasi yang disepakati bersama dengan pemilik muatan.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan12">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan12" aria-expanded="false" aria-controls="collapse4">Bagaimana data sensitif perusahaan mitra dikelola oleh Kurirmoo?</button>
-              </h2>
-              <div id="muatan12" class="accordion-collapse collapse" aria-labelledby="headingmuatan12" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Data sensitif perusahaan akan dikelola dengan standar keamanan tinggi dan sesuai kesepakatan yang ditentukan dalam perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan13">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan13" aria-expanded="false" aria-controls="collapse3">Apakah ada klausul tambahan dalam perjanjian kerja sama?</button>
-              </h2>
-              <div id="muatan13" class="accordion-collapse collapse" aria-labelledby="headingmuatan13" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, klausul tambahan seperti kebijakan penggantian barang, pengelolaan data sensitif, dan penanganan situasi khusus akan dibahas secara mendetail dalam perjanjian.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion" id="accordionFAQ1">
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="headingmuatan14">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#muatan14" aria-expanded="false" aria-controls="collapse3">Bagaimana perusahaan mitra dapat menghubungi tim logistik Kurirmoo?</button>
-              </h2>
-              <div id="muatan14" class="accordion-collapse collapse" aria-labelledby="headingmuatan14" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Perusahaan mitra dapat menghubungi tim logistik kami melalui email, telepon, atau melalui kanal komunikasi yang telah disepakati dalam perjanjian.
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
 
@@ -1966,166 +1718,20 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="accordion" id="accordionFAQ1">
+
+            @foreach ($faqekspedisi as $no => $valueEkspedisi)
             <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi1">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi1" aria-expanded="false" aria-controls="collapseOne">Apa jenis kerja sama yang ditawarkan Kurirmoo kepada pemilik ekspedisi?</button>
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne{{ $valueEkspedisi->id }}" aria-expanded="false" aria-controls="collapseOne">{{ $valueEkspedisi->pertanyaan }}</button>
               </h2>
-              <div id="ekspedisi1" class="accordion-collapse collapse" aria-labelledby="ekspedisi1" data-bs-parent="#accordionFAQ1">
+              <div id="collapseOne{{ $valueEkspedisi->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1">
                 <div class="accordion-body">
-                  Kami menawarkan kerja sama berupa pengisian muatan kosong, optimalisasi rute, serta integrasi layanan logistik melalui platform Kurirmoo untuk meningkatkan efisiensi operasional.
+                    {!! $valueEkspedisi->jawaban !!}
                 </div>
               </div>
             </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi2" aria-expanded="false" aria-controls="collapseOne">Bagaimana cara memulai kerja sama dengan Kurirmoo?</button>
-              </h2>
-              <div id="ekspedisi2" class="accordion-collapse collapse" aria-labelledby="ekspedisi2" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Hubungi kami melalui email di admin@kurirmoo.com atau isi formulir kontak di website kami. Tim kami akan menjadwalkan pertemuan untuk memahami kebutuhan Anda dan mempersiapkan perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi3" aria-expanded="false" aria-controls="collapseOne">Apa keuntungan bekerja sama dengan Kurirmoo bagi pemilik ekspedisi?</button>
-              </h2>
-              <div id="ekspedisi3" class="accordion-collapse collapse" aria-labelledby="ekspedisi3" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kurirmoo akan memberikan muatan sesuai dengan armada yang dimiliki, serta menyediakan teknologi pelacakan real-time untuk transparansi pengiriman.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi4">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi4" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo menyediakan layanan pengelolaan armada?</button>
-              </h2>
-              <div id="ekspedisi4" class="accordion-collapse collapse" aria-labelledby="ekspedisi4" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami dapat membantu mengelola armada Anda dengan menyediakan sistem pencatatan pengiriman, pelacakan GPS, serta laporan operasional secara berkala.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi5">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi5" aria-expanded="false" aria-controls="collapseOne">Bagaimana sistem pembayaran kerja sama dengan Kurirmoo?</button>
-              </h2>
-              <div id="ekspedisi5" class="accordion-collapse collapse" aria-labelledby="ekspedisi5" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Pembayaran dilakukan dua minggu setelah invoice diterima. Sistem ini dapat disesuaikan sesuai kesepakatan dalam perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi6">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi6" aria-expanded="false" aria-controls="collapseOne">Apakah ada biaya bergabung bagi pemilik ekspedisi?</button>
-              </h2>
-              <div id="ekspedisi6" class="accordion-collapse collapse" aria-labelledby="ekspedisi6" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Tidak ada biaya bergabung. Namun, kami memiliki struktur biaya berbasis layanan yang akan dibahas lebih lanjut dalam perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi7">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi7" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo membantu mencarikan pelanggan untuk pemilik ekspedisi?</button>
-              </h2>
-              <div id="ekspedisi7" class="accordion-collapse collapse" aria-labelledby="ekspedisi7" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Pasti, kami akan memprioritaskan distribusi muatan kepada ekspedisi yang telah bergabung dalam jaringan kami, memastikan peluang pengiriman lebih besar dan layanan yang saling menguntungkan.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi8">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi8" aria-expanded="false" aria-controls="collapseOne">Bagaimana pengaturan jadwal dan rute pengiriman?</button>
-              </h2>
-              <div id="ekspedisi8" class="accordion-collapse collapse" aria-labelledby="ekspedisi8" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Jadwal dan rute pengiriman akan diatur berdasarkan kesepakatan antara pemilik ekspedisi, Kurirmoo, dan pelanggan untuk memastikan efisiensi dan ketepatan waktu.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi9">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi9" aria-expanded="false" aria-controls="collapseOne">Apakah barang yang diangkut melalui kerja sama ini diasuransikan?</button>
-              </h2>
-              <div id="ekspedisi9" class="accordion-collapse collapse" aria-labelledby="ekspedisi9" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kurirmoo menyediakan opsi asuransi untuk barang yang diangkut, dengan nilai asuransi yang disesuaikan berdasarkan kesepakatan bersama.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi10">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi10" aria-expanded="false" aria-controls="collapseOne">Apakah Kurirmoo memberikan laporan operasional?</button>
-              </h2>
-              <div id="ekspedisi10" class="accordion-collapse collapse" aria-labelledby="ekspedisi10" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, kami menyediakan laporan operasional secara berkala, termasuk detail pengiriman, performa armada, dan analisis data untuk membantu meningkatkan efisiensi ekspedisi Anda.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi11">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi11" aria-expanded="false" aria-controls="collapseOne">Bagaimana Kurirmoo menangani kondisi force majeure dalam kerja sama ini?</button>
-              </h2>
-              <div id="ekspedisi11" class="accordion-collapse collapse" aria-labelledby="ekspedisi11" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Dalam situasi force majeure, kami akan berkoordinasi dengan pemilik ekspedisi dan pelanggan untuk mencari solusi terbaik sesuai kesepakatan dalam perjanjian.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi12">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi12" aria-expanded="false" aria-controls="collapseOne">Apakah pemilik ekspedisi dapat menggunakan teknologi pelacakan Kurirmoo?</button>
-              </h2>
-              <div id="ekspedisi12" class="accordion-collapse collapse" aria-labelledby="ekspedisi12" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, mitra pemilik ekspedisi akan mendapatkan akses ke teknologi pelacakan yang terpasang diaplikasi kami untuk memantau armada dan barang yang diangkut secara real-time.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi13">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi13" aria-expanded="false" aria-controls="collapseOne">Bagaimana perlindungan data mitra ekspedisi di Kurirmoo?</button>
-              </h2>
-              <div id="ekspedisi13" class="accordion-collapse collapse" aria-labelledby="ekspedisi13" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Data mitra ekspedisi dikelola dengan standar keamanan tinggi dan hanya digunakan untuk tujuan operasional sesuai dengan perjanjian kerja sama.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi14">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi14" aria-expanded="false" aria-controls="collapseOne">Apa jenis barang yang dapat diangkut melalui kerja sama ini?</button>
-              </h2>
-              <div id="ekspedisi14" class="accordion-collapse collapse" aria-labelledby="ekspedisi14" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kami melayani pengangkutan barang yang sesuai dengan peraturan hukum yang berlaku. Barang berbahaya atau ilegal tidak diperbolehkan.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi15">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi15" aria-expanded="false" aria-controls="collapseOne">Bagaimana jika terjadi kerusakan atau kehilangan barang selama pengiriman?</button>
-              </h2>
-              <div id="ekspedisi15" class="accordion-collapse collapse" aria-labelledby="ekspedisi15" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Kebijakan penggantian barang akan ditentukan berdasarkan perjanjian yang disepakati antara pemilik ekspedisi, Kurirmoo, dan pelanggan.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
-              <h2 class="accordion-header" id="ekspedisi16">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ekspedisi16" aria-expanded="false" aria-controls="collapseOne">Apakah ada dukungan pelanggan khusus untuk mitra ekspedisi?</button>
-              </h2>
-              <div id="ekspedisi16" class="accordion-collapse collapse" aria-labelledby="ekspedisi16" data-bs-parent="#accordionFAQ1">
-                <div class="accordion-body">
-                  Ya, mitra ekspedisi akan mendapatkan dukungan khusus dari tim Kurirmoo untuk memastikan kelancaran operasional dan menangani setiap kendala yang mungkin terjadi.
-                </div>
-              </div>
-            </div>
+            @endforeach
+
           </div>
         </div>
       </div>

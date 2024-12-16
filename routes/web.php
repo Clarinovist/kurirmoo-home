@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\IklanController;
@@ -76,4 +77,10 @@ Route::get('/tutorial-admin', [TutorialController::class, 'index'])->name('tutor
 Route::post('/tambah_tutorial', [TutorialController::class, 'tambah_tutorial'])->name('tambah_tutorial');
 Route::post('/ubah_tutorial/{id}', [TutorialController::class, 'ubah_tutorial'])->name('ubah_tutorial');
 Route::delete('/hapus_tutorial/{id}', [TutorialController::class, 'hapus_tutorial'])->name('hapus_tutorial');
+
+// FAQ
+Route::get('/faq-admin', [FaqController::class, 'index'])->name('faq');
+Route::post('/tambah_faq', [FaqController::class, 'tambah_faq'])->name('tambah_faq');
+Route::post('/ubah_faq/{id}', [FaqController::class, 'ubah_faq'])->name('ubah_faq');
+Route::delete('/hapus_faq/{id}', [FaqController::class, 'hapus_faq'])->name('hapus_faq');
 });

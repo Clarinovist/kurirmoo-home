@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutUs;
+use App\Models\Faq;
 use App\Models\Hero;
 use App\Models\Iklan;
 use App\Models\Keunggulan;
@@ -20,7 +21,12 @@ class LandingpageController extends Controller
         $hero =  Hero::first();
         $kontak =  Kontak::first();
         $tutorial = Tutorial::all();
-        return view('landingpage.index')->with(['about' => $about, 'iklan' => $iklan, 'keunggulan' => $keunggulan, 'hero' => $hero, 'kontak' => $kontak, 'tutorial' => $tutorial]);
+        $faqgeneral =Faq::where('kategori', 'General')->get();
+        $faqmuatan =Faq::where('kategori', 'Kerjasama Perusahaan Pemilik Muatan')->get();
+        $faqekspedisi =Faq::where('kategori', 'Kerjasama Perusahaan Pemilik Ekspedisi')->get();
+
+        // dd($faqgeneral);
+        return view('landingpage.index')->with(['about' => $about, 'iklan' => $iklan, 'keunggulan' => $keunggulan, 'hero' => $hero, 'kontak' => $kontak, 'tutorial' => $tutorial, 'faqgeneral' => $faqgeneral, 'faqmuatan' => $faqmuatan, 'faqekspedisi' => $faqekspedisi]);
     }
 
 

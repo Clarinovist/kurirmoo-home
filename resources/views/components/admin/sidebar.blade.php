@@ -38,8 +38,14 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/tutorial-admin">
-            <i class="mdi mdi-card-account-phone-outline menu-icon"></i>
+            <i class="mdi mdi-cast-education menu-icon"></i>
           <span class="menu-title">Tutorial Aplikasi</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/faq-admin">
+            <i class="mdi mdi-frequently-asked-questions menu-icon"></i>
+          <span class="menu-title">FAQ</span>
         </a>
       </li>
       <li class="nav-item">

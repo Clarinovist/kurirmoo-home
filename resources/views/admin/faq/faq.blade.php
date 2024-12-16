@@ -4,8 +4,8 @@
           <div class="col-md-12 grid-margin">
             <div class="row">
               <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                <h3 class="font-weight-bold">Keunggulan</h3>
-                <h6 class="font-weight-normal mb-0">Menu Keunggulan</h6>
+                <h3 class="font-weight-bold">Frequently Asked Questions</h3>
+                <h6 class="font-weight-normal mb-0">Menu Frequently Asked Questions</h6>
               </div>
             </div>
           </div>
@@ -19,41 +19,45 @@
 
                     <div class="card-header">
                       <h4>
-                        Keunggulan
+                        Frequently Asked Questions
 
                         {{-- Button off canvas tambah Berita --}}
-                        <button class="btn btn-primary btn-rounded btn-fw float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#tambah_keunggulan" aria-controls="offcanvasRight">
-                            <i class="mdi mdi-plus-box-outline"></i> Tambah Keunggulan
+                        <button class="btn btn-primary btn-rounded btn-fw float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#tambah_faq" aria-controls="offcanvasRight">
+                            <i class="mdi mdi-plus-box-outline"></i> Tambah Faq
                         </button>
                       </h4>
-                      <p class="card-description"> Data <code>Keunggulan</code></p>
+                      <p class="card-description"> Data <code>Tutorial</code></p>
                   </div>
                   {{-- Offcanvas Tambah Berita --}}
-                  <div class="offcanvas offcanvas-end" style="width: 700px;" tabindex="-1" id="tambah_keunggulan" aria-labelledby="offcanvasRightLabel">
+                  <div class="offcanvas offcanvas-end" style="width: 700px;" tabindex="-1" id="tambah_faq" aria-labelledby="offcanvasRightLabel">
                       <div class="offcanvas-header">
-                          <h5 id="offcanvasRightLabel">Tambah Keunggulan</h5>
+                          <h5 id="offcanvasRightLabel">Tambah Frequently Asked Questions</h5>
                           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                     <div class="offcanvas-body">
-                      <form action="/tambah_keunggulan" method="POST" enctype="multipart/form-data">
+                      <form action="/tambah_faq" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="card">
                             <div class="card-body">
-                              <h4 class="card-title">Tambah Keunggulan</h4>
+                              <h4 class="card-title">Tambah Frequently Asked Questions</h4>
 
                               <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control form-control-sm" id="nama" name="nama" placeholder="Nama">
+                                <label for="pertanyaan">Pertanyaan</label>
+                                <input type="text" class="form-control form-control-sm" id="pertanyaan" name="pertanyaan" placeholder="pertanyaan">
                               </div>
                               <div class="form-group">
-                                <label for="desc">Deskripsi</label>
-                                <textarea class="form-control" name="desc" id="desc" rows="50"></textarea>
+                                <label for="jawaban">Jawaban</label>
+                                <textarea class="form-control" name="jawaban" id="jawaban" rows="50"></textarea>
                               </div>
                               <div class="form-group">
-                                <label for="icon">Icon</label>
-                                <input type="text" class="form-control form-control-sm" id="icon" name="icon" placeholder="Icon">
-                                <small class="text-danger">*Contoh : fa fa-truck fa-2x </i> </small>
-                              </div>
+                                <label for="exampleInputUsername1">Kategori</label>
+                                <select name="kategori" id="kategori" class="form-control" required>
+                                        <option value="">-- Pilih Kategori --</option>
+                                        <option value="General">General</option>
+                                        <option value="Kerjasama Perusahaan Pemilik Muatan">Kerjasama Perusahaan Pemilik Muatan</option>
+                                        <option value="Kerjasama Perusahaan Pemilik Ekspedisi">Kerjasama Perusahaan Pemilik Ekspedisi</option>
+                                </select>
+                            </div>
 
                             </div>
                         </div>
@@ -72,49 +76,53 @@
                         <thead>
                           <tr>
                             <th> No </th>
-                            <th> Nama </th>
-                            <th> Deskripsi </th>
-                            <th> Icon </th>
+                            <th> Pertanyaan </th>
+                            <th> Jawaban </th>
+                            <th> Kategori </th>
                             <th> Action </th>
                           </tr>
                         </thead>
                         <tbody>
-                            @foreach ($keunggulan as $no => $value)
+                            @foreach ($faq as $no => $value)
                             <tr>
                                 <td class="py-1">{{ ++$no }}</td>
-                                <td width="10%">{{ $value->nama }}</td>
-                                <td>{!! Str::substr($value->desc, 0, 70) !!} ......</td>
-                                <td>{{ $value->icon }}</td>
+                                <td width="10%">{{ $value->pertanyaan }}</td>
+                                <td>{!! Str::substr($value->jawaban, 0, 70) !!} ......</td>
+                                <td>{{ $value->kategori }}</td>
                                 <td width="20%">
-                                    <button class="btn btn-warning btn-rounded btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#ubah_keunggulan{{ $value->id }}" aria-controls="offcanvasRight">
+                                    <button class="btn btn-warning btn-rounded btn-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#ubah_faq{{ $value->id }}" aria-controls="offcanvasRight">
                                         <i class="mdi mdi-pencil"></i>
                                     </button>
                                     {{-- Off canvas Ubah Keunggulan --}}
-                                    <div class="offcanvas offcanvas-end" style="width: 700px;" tabindex="-1" id="ubah_keunggulan{{ $value->id }}" aria-labelledby="offcanvasRightLabel">
+                                    <div class="offcanvas offcanvas-end" style="width: 700px;" tabindex="-1" id="ubah_faq{{ $value->id }}" aria-labelledby="offcanvasRightLabel">
 
                                         <div class="offcanvas-header">
-                                            <h5 id="offcanvasRightLabel">Ubah Keunggulan</h5>
+                                            <h5 id="offcanvasRightLabel">Ubah Faq</h5>
                                             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                         </div>
                                         <div class="offcanvas-body">
-                                            <form action="{{ route('ubah_keunggulan',$value->id) }}" method="POST" enctype="multipart/form-data">
+                                            <form action="{{ route('ubah_faq',$value->id) }}" method="POST" enctype="multipart/form-data">
                                                     @csrf
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <h4 class="card-title">Ubah Keunggulan</h4>
+                                                        <h4 class="card-title">Ubah Faq</h4>
                                                         <div class="form-group">
-                                                            <label for="nama">Nama</label>
-                                                            <input type="text" class="form-control form-control-sm" id="nama" name="nama" value="{{ $value->nama }}">
+                                                            <label for="pertanyaan">Pertanyaan</label>
+                                                            <input type="text" class="form-control form-control-sm" id="pertanyaan" name="pertanyaan" value="{{ $value->pertanyaan }}">
                                                           </div>
                                                           <div class="form-group">
-                                                            <label for="desc">Deskripsi</label>
-                                                            <textarea class="form-control" name="desc" id="desc_ubah" rows="50">{!! $value->desc !!}</textarea>
+                                                            <label for="jawaban">Jawaban</label>
+                                                            <textarea class="form-control" name="jawaban" id="jawaban_ubah" rows="50">{!! $value->jawaban !!}</textarea>
                                                           </div>
                                                           <div class="form-group">
-                                                            <label for="icon">Icon</label>
-                                                            <input type="text" class="form-control form-control-sm" id="icon" name="icon" value="{{ $value->icon }}">
-                                                            <small class="text-danger">*Contoh : fa fa-truck fa-2x </i> </small>
-                                                          </div>
+                                                            <label for="exampleInputUsername1">Kategori</label>
+                                                            <select name="kategori" id="kategori" class="form-control">
+                                                                    <option value="{{ $value->kategori }}">{{ $value->kategori }}</option>
+                                                                    <option value="General">General</option>
+                                                                    <option value="Kerjasama Perusahaan Pemilik Muatan">Kerjasama Perusahaan Pemilik Muatan</option>
+                                                                    <option value="Kerjasama Perusahaan Pemilik Ekspedisi">Kerjasama Perusahaan Pemilik Ekspedisi</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -139,7 +147,7 @@
                                         <div class="modal fade text-left" id="hapusModal{{ $value->id }}" tabindex="-1" role="dialog"
                                             aria-labelledby="hapusModalLabel{{ $value->id }}" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                                                <form action="{{ url('/hapus_keunggulan/' . $value->id) }}" method="POST" class="d-inline">
+                                                <form action="{{ url('/hapus_faq/' . $value->id) }}" method="POST" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
 
@@ -147,14 +155,14 @@
                                                         <!-- Modal Header -->
                                                         <div class="modal-header bg-danger">
                                                             <h5 class="modal-title white" id="hapusModalLabel{{ $value->id }}">
-                                                                Hapus Data Keunggulan
+                                                                Hapus Data Tutorial
                                                             </h5>
                                                             <button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
 
                                                         <!-- Modal Body -->
                                                         <div class="modal-body">
-                                                            Apakah kamu yakin ingin menghapus data Keunggulan {{ $value->nama }} ini?
+                                                            Apakah kamu yakin ingin menghapus data Faq {{ $value->pertanyaan }} ini?
                                                         </div>
 
                                                         <!-- Modal Footer -->
@@ -194,7 +202,7 @@
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
     <script>
        ClassicEditor
-            .create(document.querySelector('#desc'), {
+            .create(document.querySelector('#jawaban'), {
                 toolbar: {
                     items: [
                         'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList','|', 'insertTable', '|', 'undo', 'redo'
@@ -221,8 +229,9 @@
             .catch(error => {
                 console.error(error);
             });
-      // Ubah
-    document.querySelectorAll('textarea[id^="desc_ubah"]').forEach(textarea => {
+
+            // Ubah
+    document.querySelectorAll('textarea[id^="jawaban_ubah"]').forEach(textarea => {
     ClassicEditor
         .create(textarea, {
             toolbar: {
