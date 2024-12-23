@@ -47,7 +47,7 @@
                               </div>
                               <div class="form-group">
                                 <label for="jawaban">Jawaban</label>
-                                <textarea class="form-control" name="jawaban" id="jawaban" rows="50"></textarea>
+                                <textarea class="form-control" name="jawaban" id="jawaban"></textarea>
                               </div>
                               <div class="form-group">
                                 <label for="exampleInputUsername1">Kategori</label>
@@ -112,7 +112,7 @@
                                                           </div>
                                                           <div class="form-group">
                                                             <label for="jawaban">Jawaban</label>
-                                                            <textarea class="form-control" name="jawaban" id="jawaban_ubah" rows="50">{!! $value->jawaban !!}</textarea>
+                                                            <textarea class="form-control" name="jawaban" id="jawaban" >{{ $value->jawaban }}</textarea>
                                                           </div>
                                                           <div class="form-group">
                                                             <label for="exampleInputUsername1">Kategori</label>
@@ -200,7 +200,7 @@
         new DataTable('#example');
     </script>
     <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
-    <script>
+    {{-- <script>
        ClassicEditor
             .create(document.querySelector('#jawaban'), {
                 toolbar: {
@@ -260,5 +260,5 @@
             console.error(error);
         });
 });
-    </script>
+    </script> --}}
 </x-admin.app>

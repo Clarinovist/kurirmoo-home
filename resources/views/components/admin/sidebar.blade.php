@@ -3,7 +3,7 @@
       <li class="nav-item">
         <a class="nav-link" href="/home-admin">
           <i class="icon-grid menu-icon"></i>
-          <span class="menu-title">Dashboard</span>
+          <span class="menu-title">Home</span>
         </a>
       </li>
       <li class="nav-item">
@@ -37,23 +37,23 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/kontak-admin">
-            <i class="mdi mdi-card-account-phone-outline menu-icon"></i>
-          <span class="menu-title">Kontak</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/tutorial-admin">
+          <a class="nav-link" href="/tutorial-admin">
             <i class="mdi mdi-cast-education menu-icon"></i>
-          <span class="menu-title">Tutorial Aplikasi</span>
+            <span class="menu-title">Tutorial Aplikasi</span>
         </a>
-      </li>
-      <li class="nav-item">
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="/faq-admin">
             <i class="mdi mdi-frequently-asked-questions menu-icon"></i>
-          <span class="menu-title">FAQ</span>
+            <span class="menu-title">FAQ</span>
         </a>
-      </li>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/kontak-admin">
+          <i class="mdi mdi-card-account-phone-outline menu-icon"></i>
+        <span class="menu-title">Kontak</span>
+      </a>
+    </li>
       {{-- <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="mdi mdi-account-key menu-icon"></i>

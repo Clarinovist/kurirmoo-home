@@ -139,7 +139,7 @@
           <h1 class="mb-4">Keunggulan Kurirmoo</h1>
         </div>
         <div class="col-lg-12">
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             @foreach ($keunggulan as $no => $valueKeunggulan)
             <div class="col-md-3">
               <div class="row g-4">
@@ -179,7 +179,7 @@
           <h1 class="mb-4">Jenis Muatan</h1>
         </div>
         <div class="col-lg-12">
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             <div class="col-md-3">
               <div class="row g-4">
                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
@@ -456,24 +456,26 @@
           <div class="row g-4">
 
             <!-- Pickup L300 Bak -->
+            @foreach ($armada as $no => $valueArmada)
             <div class="col-md-3">
               <div class="row g-4">
                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                   <div class="service-item d-flex flex-column justify-content-center text-start rounded">
                     <div class="service-icon btn-square">
-
-                      <i class="fa fa-truck fa-3x"></i>
+                        <img src="{{ asset('storage/' . $valueArmada->gambar) }}" alt="" width="250%" height="auto">
+                        {{-- {{ asset('storage/' . $valueArmada->gambar) }} --}}
+                      {{-- <i class="fa fa-truck fa-3x"></i> --}}
                     </div>
                     <h3 class="mb-3 text-center">
                       <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Pickup">
-                        Pickup L300  Bak
+                        {{ $valueArmada->nama }}
                       </button>
                     </h3>
                     <div class="modal fade" id="Pickup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="text-dark">Pickup L300 Bak</h5>
+                            <h5 class="text-dark">{{ $valueArmada->nama }}</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
@@ -490,11 +492,11 @@
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th scope="row">Panjang : 242 cm, Lebar : 144 cm, Tinggi : 30 cm, Dimensi : 6 CBM</th>
-                                  <td>Berat Kosong : 800 Kg, Berat Kosong : 800 Kg</td>
-                                  <td>Panjang : 372 cm, Lebar : 183 cm, Tinggi : 182 cm</td>
-                                  <td>Model : G15A, Kapasitas Silinder : 1493 cc, Tenaga Maksimum (PS/rpm) : 78,8/5500</td>
-                                  <td>Ukuran Ban: 165R 13C 94/92R 8PR, </td>
+                                  <td scope="row">{{ $valueArmada->ukuran_karoseri }}</td>
+                                  <td>{{ $valueArmada->berat }}</td>
+                                  <td>{{ $valueArmada->ukuran_mobil }}</td>
+                                  <td>{{ $valueArmada->mesin }}</td>
+                                  <td>{{ $valueArmada->roda }}</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -511,443 +513,7 @@
                 </div>
               </div>
             </div>
-
-            <!-- Pickup Box -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.2s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#PickupBox">
-                        Pickup Bak
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="PickupBox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark">Pickup Bak</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Ukuran Karoseri</th>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Panjang : 237 cm, Lebar : 155 cm, Tinggi : 129 cm, Dimensi : 4 CBM</th>
-                                  <td>Berat Kosong : 1 Ton, Berat Maksimal : 1,5 Ton</td>
-                                  <td>Panjang : 428 cm, Lebar : 167 cm, Tinggi : 207 cm</td>
-                                  <td>Model : 3SZ - VE, DOHC VVTi berpendingin air, Kapasitas Silinder : 1298 cc, Tenaga Maksimum (PS/rpm) : 88/6000</td>
-                                  <td>Ukuran Ban: 175 R13 - 8PR</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Pickup Refeer -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#PickupRefeer">
-                        Pickup Refeer
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="PickupRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark">Pickup Refeer</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Ukuran Karoseri</th>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Panjang : 237 cm, Lebar : 155 cm, Tinggi : 129 cm, Dimensi : 4 CBM, Suhu Maksimum : -20 Derajat</th>
-                                  <td>Berat Kosong : 1 Ton, Berat Maksimal : 1,5 Ton</td>
-                                  <td>Panjang : 428 cm, Lebar : 167 cm, Tinggi : 207 cm</td>
-                                  <td>Model : 3SZ - VE, DOHC VVTi berpendingin air, Kapasitas Silinder : 1298 cc, Tenaga Maksimum (PS/rpm) : 88/6000</td>
-                                  <td>Ukuran Ban: 175 R13 - 8PR</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Granmax Box -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.4s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Granmax">
-                        Granmax Box
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="Granmax" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark">Granmax Box</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Berat Kosong : 2 Ton, Berat Maksimal : 3 Ton</th>
-                                  <td>BPanjang : 150 cm, Lebar : 160 cm, Tinggi : 108 cm</td>
-                                  <td>Model : K3 - DE, DOHC, Kapasitas Silinder : 1298 cc</td>
-                                  <td>Ukuran Ban : 165 R13 - C</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Granmax Blindvan -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.4s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#GranmaxBlin">
-                        Granmax Blindvan
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="GranmaxBlin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark"> Granmax Blindvan</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Berat Kosong : 2 Ton, Berat Maksimal : 3 Ton</th>
-                                  <td>BPanjang : 150 cm, Lebar : 160 cm, Tinggi : 108 cm</td>
-                                  <td>Model : K3 - DE, DOHC, Kapasitas Silinder : 1298 cc</td>
-                                  <td>Ukuran Ban : 165 R13 - C</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- Colt Diesel Engkel Box -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.6s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                      <h3 class="mb-3 text-center">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Coltengkel">
-                          Colt Diesel Engkel Box
-                        </button>
-                      </h3>
-                      <div class="modal fade" id="Coltengkel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="text-dark">Colt Diesel Engkel Box</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="table-responsive">
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Ukuran Karoseri</th>
-                                    <th scope="col">Berat</th>
-                                    <th scope="col">Ukuran Mobil</th>
-                                    <th scope="col">Mesin</th>
-                                    <th scope="col">Roda dan Ban</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Panjang : 350 cm, Lebar : 160 cm, Tinggi : 80 cm</th>
-                                    <td>Berat Kosong : 1,5 Ton, Berat Maksimal : 5,1 Ton</td>
-                                    <td>Panjang : 459 cm, Lebar : 169 cm, Tinggi : 212 cm</td>
-                                    <td>Model : 4JB1-TC, Kapasitas Silinder : 2,771, Tenaga Maksimum (PS/rpm) : 100 / 3,400</td>
-                                    <td>Ukuran Ban: 7.50 - 15 - 10PR</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Colt Diesel Engkel Terbuka -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                      <h3 class="mb-3 text-center">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelTerbuka">
-                          Colt Diesel Engkel Terbuka
-                        </button>
-                      </h3>
-                      <div class="modal fade" id="ColtengkelTerbuka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="text-dark">Colt Diesel Engkel Terbuka</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="table-responsive">
-                              <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Ukuran Karoseri</th>
-                                    <th scope="col">Berat</th>
-                                    <th scope="col">Ukuran Mobil</th>
-                                    <th scope="col">Mesin</th>
-                                    <th scope="col">Roda dan Ban</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">Panjang : 350 cm, Lebar : 173 cm, Dimensi : 11 CBM</th>
-                                    <td>Berat Kosong : 1,8 Ton, Berat Maksimal : 5 Ton</td>
-                                    <td>Panjang : 473 cm, Lebar : 175 cm, Tinggi : 205 cm</td>
-                                    <td>Model : 4D34-2AT5, Kapasitas Silinder : 3.908, Tenaga Maksimum (PS/rpm) : 110/2.900</td>
-                                    <td>-</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Colt Diesel Engkel Refeer Box -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.8s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelRefeer">
-                        Colt Diesel Engkel Refeer Box
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="ColtengkelRefeer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark">Colt Diesel Engkel Refeer Box</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Ukuran Karoseri</th>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Panjang : 350 cm, Lebar : 173 cm, Tinggi : 200 cm, Dimensi : 9 CBM</th>
-                                  <td>Berat Kosong : 1,8 Ton, Berat Maksimal : 5 Ton</td>
-                                  <td>Panjang : 473 cm, Lebar : 175 cm</td>
-                                  <td>Model : 4D34-2AT5, Kapasitas Silinder : 3.908</td>
-                                  <td>-</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Colt Diesel Engkel Bak -->
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.9s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-truck fa-3x"></i>
-                    </div>
-                    <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ColtengkelBak">
-                        Colt Diesel Engkel Bak
-                      </button>
-                    </h3>
-                    <div class="modal fade" id="ColtengkelBak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="text-dark">Colt Diesel Engkel Bak</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th scope="col">Ukuran Karoseri</th>
-                                  <th scope="col">Berat</th>
-                                  <th scope="col">Ukuran Mobil</th>
-                                  <th scope="col">Mesin</th>
-                                  <th scope="col">Roda dan Ban</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row">Panjang : 350 cm, Lebar : 160 cm, Tinggi : 80 cm</th>
-                                  <td>Berat Kosong : 1,5 Ton, Berat Maksimal : 5,1 Ton</td>
-                                  <td>Panjang : 459 cm, Lebar : 169 cm</td>
-                                  <td>Model : 4JB1-TC, Kapasitas Silinder : 2,771</td>
-                                  <td>Ukuran Ban: 7.50 - 15 - 10PR</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
 
             <!-- Colt Diesel Double Box -->
             <div class="col-md-3">
@@ -1874,7 +1440,7 @@
       <div class="row g-5">
         <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
           <a href="/" class="d-inline-block mb-3">
-            <h1 class="text-white">Kurirmoo<span class="text-primary">.</span></h1>
+            <h1 class="text-white">Kurirmoo<span class="text-primary">.</span>id</h1>
           </a>
           <p class="mb-0">YOUR DIGITAL LOGISTICS SOLUTION</p>
         </div>

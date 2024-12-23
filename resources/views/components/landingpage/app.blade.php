@@ -141,7 +141,7 @@
       <nav class="navbar navbar-expand-lg navbar-dark p-0">
         <a href="/" class="navbar-brand">
           <!-- <img src="img/logo-kurirmoo.png" alt="" width="80px"> -->
-          <h1 class="text-white">Kurirmoo<span class="text-dark">.</span></h1>
+          <h1 class="text-white">Kurirmoo<span class="text-dark">.</span>id</h1>
         </a>
         <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
