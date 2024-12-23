@@ -16,7 +16,7 @@ class CreateArmadaTable extends Migration
         Schema::create('tb_armada', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('icon');
+            $table->string('gambar');
             $table->string('id_detail_armada');
             $table->timestamps();
         });

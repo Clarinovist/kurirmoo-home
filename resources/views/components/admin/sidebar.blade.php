@@ -31,6 +31,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/armada-admin">
+            <i class="mdi mdi-car-connected menu-icon"></i>
+          <span class="menu-title">Armada</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/kontak-admin">
             <i class="mdi mdi-card-account-phone-outline menu-icon"></i>
           <span class="menu-title">Kontak</span>
@@ -48,11 +54,11 @@
           <span class="menu-title">FAQ</span>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="mdi mdi-account-key menu-icon"></i>
           <span class="menu-title">Users</span>
         </a>
-      </li>
+      </li> --}}
     </ul>
 </nav>
