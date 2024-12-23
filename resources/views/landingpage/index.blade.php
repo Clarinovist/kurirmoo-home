@@ -516,7 +516,7 @@
             @endforeach
 
             <!-- Colt Diesel Double Box -->
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
               <div class="row g-4">
                 <div class="col-12 wow fadeIn" data-wow-delay="1.0s">
                   <div class="service-item d-flex flex-column justify-content-center text-start rounded">
@@ -844,7 +844,10 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
+
+
+            {{-- OLD di bawah --}}
 
             <!-- Fuso Box -->
             <!-- <div class="col-md-3">
