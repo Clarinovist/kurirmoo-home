@@ -180,187 +180,33 @@
         </div>
         <div class="col-lg-12">
           <div class="row g-4 justify-content-center">
+            @foreach ($jenismuatan as $no => $valueJenismuatan)
             <div class="col-md-3">
               <div class="row g-4">
                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                   <div class="service-item d-flex flex-column justify-content-center text-start rounded">
                     <div class="service-icon btn-square">
-                      <i class="bi bi-box fa-2x"></i>
+                      <i class="{{ $valueJenismuatan->icon }}"></i>
                     </div>
                     <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#kardus" aria-expanded="false" aria-controls="kardus" style="font-size: 17px;">Kardus
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#data{{ $valueJenismuatan->id }}" aria-expanded="false" aria-controls="kardus" style="font-size: 17px;">{{ $valueJenismuatan->judul }}
                       </button>
                     </h3>
-                    <div id="kardus" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
+                    {{-- <div id="data{{ $valueJenismuatan->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
                       <div class="accordion-body">
-                        Muatan berbentuk karung, seperti beras, biji-bijian, pupuk, atau bahan curah lainnya, ideal untuk pengangkutan skala kecil hingga besar.
+                        {!! $valueJenismuatan->desc !!}
                       </div>
-                    </div>
+                    </div> --}}
+                    <div id="data{{ $valueJenismuatan->id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" >
+                        <div class="accordion-body"  style="color: white;">
+                          {!! $valueJenismuatan->desc !!}
+                        </div>
+                      </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                        <i class="bi bi-archive fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#karung" aria-expanded="false" aria-controls="karung" style="font-size: 17px;">Karung
-                      </button>
-                    </h3>
-                    <div id="karung" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Digunakan untuk mengangkut barang-barang dalam kemasan praktis seperti produk ritel, pakaian, buku, atau barang pecah belah dengan pelindung tambahan.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-box fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#peti" aria-expanded="false" aria-controls="peti" style="font-size: 17px;">Peti
-                      </button>
-                    </h3>
-                    <div id="peti" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Muatan dalam peti kayu atau plastik, cocok untuk barang berat, barang rapuh, atau barang dengan dimensi khusus seperti mesin kecil atau suku cadang.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-arrow-down-right-circle fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Curah" aria-expanded="false" aria-controls="Curah" style="font-size: 17px;">Curah
-                      </button>
-                    </h3>
-                    <div id="Curah" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Barang tanpa kemasan khusus, seperti pasir, batu, biji-bijian, atau bahan mentah lainnya yang diangkut secara langsung dalam truk atau kontainer.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-house fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Pindahan" aria-expanded="false" aria-controls="Pindahan" style="font-size: 17px;">Pindahan Rumah
-                      </button>
-                    </h3>
-                    <div id="Pindahan" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Layanan untuk memindahkan seluruh isi rumah, termasuk perabotan besar, elektronik, dan barang-barang lainnya dalam skala besar.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-align-start fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Furniture" aria-expanded="false" aria-controls="Furniture" style="font-size: 17px;">Furniture
-                      </button>
-                    </h3>
-                    <div id="Furniture" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Pengangkutan berbagai jenis perabot, seperti meja, kursi, lemari, atau sofa, dengan perlindungan khusus untuk menghindari kerusakan.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-flower1 fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Tanaman" aria-expanded="false" aria-controls="Tanaman" style="font-size: 17px;">Tanaman
-                      </button>
-                    </h3>
-                    <div id="Tanaman" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Layanan untuk mengangkut tanaman hias atau pertanian dengan perlakuan hati-hati untuk menjaga keutuhan dan kesehatan tanaman.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="bi bi-asterisk fa-2x"></i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Segar" aria-expanded="false" aria-controls="Segar" style="font-size: 17px;">Produk Segar
-                      </button>
-                    </h3>
-                    <div id="Segar" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Pengangkutan bahan makanan seperti buah, sayur, atau produk pertanian lainnya, dengan opsi kontrol suhu jika diperlukan.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="row g-4">
-                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
-                  <div class="service-item d-flex flex-column justify-content-center text-start rounded">
-                    <div class="service-icon btn-square">
-                      <i class="fa fa-location-arrow fa-2x"></i>
-                      <i class="bi bi-backpack3 fa-2x"></i> </i>
-                    </div>
-                    <h3 class="mb-3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#Kebutuhan" aria-expanded="false" aria-controls="Kebutuhan" style="font-size: 17px;">Kebutuhan Rumah Tangga
-                      </button>
-                    </h3>
-                    <div id="Kebutuhan" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ1" style="background-color: white;">
-                      <div class="accordion-body">
-                        Barang-barang seperti alat masak, peralatan kebersihan, atau kebutuhan harian lainnya, dikemas untuk memudahkan pengiriman.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
           </div>
 
         </div>
@@ -377,24 +223,20 @@
       <div class="row g-5">
         <div class="col-lg-8 wow fadeIn" data-wow-delay="0.5s">
           <div class="owl-carousel testimonial-carousel border-start border-primary">
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            @foreach ($artikel as $no => $valueArtikel)
+            <div class="testimonial-item ps-5" >
               <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-              <p class="fs-4">Artikel 1</p>
-              <div class="d-flex align-items-center">
+              <h4 class="fs-4">{{ $valueArtikel->judul }}</h4>
+            <div class="d-flex align-items-center">
                 <div class="ps-3">
+                      <img src="{{ asset('storage/' . $valueArtikel->gambar) }}" class="d-block w-100" alt="..." width="auto" height="auto">
+                      <p class="mb-4">{!! Str::substr($valueArtikel->desc, 0, 50) !!} ...</p>
                   <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
                 </div>
               </div>
             </div>
-            <div class="testimonial-item ps-5" style="background-image: url('{{ asset('assets_landingpage/img/iklan/iklan.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-              <i class="fa fa-quote-left fa-2x text-danger mb-3"></i>
-              <p class="fs-4">Artikel 2</p>
-              <div class="d-flex align-items-center">
-                <div class="ps-3">
-                  <a class="btn btn-danger rounded-pill px-4" href="#">Read More</a>
-                </div>
-              </div>
-            </div>
+            @endforeach
+
           </div>
         </div>
         <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
@@ -415,7 +257,7 @@
       <div class="row g-5">
         <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s">
           <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Jangkauan Area Layanan</div>
-          <h1 class="mb-4 text-white">Jangkauan Area</h1>
+          <h1 class="mb-4 text-white">Jangkauan Area Seluruh Indonesia</h1>
         </div>
         <div class="col-lg-4 wow fadeIn mb-2" data-wow-delay="0.3s">
           {{-- <h2 class="text-dark mb-4">Jawa Timur</h2>

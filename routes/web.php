@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\ArmadaController;
+use App\Http\Controllers\Admin\ArtikelController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\IklanController;
+use App\Http\Controllers\Admin\JenisMuatanController;
 use App\Http\Controllers\Admin\KeunggulanController;
 use App\Http\Controllers\Admin\KontakController;
 use App\Http\Controllers\Admin\TutorialController;
@@ -91,4 +93,16 @@ Route::get('/hero-admin', [HeroController::class, 'index'])->name('hero');
     Route::post('/tambah_armada', [ArmadaController::class, 'tambah_armada'])->name('tambah_armada');
     Route::post('/ubah_armada/{id}', [ArmadaController::class, 'ubah_armada'])->name('ubah_armada');
     Route::delete('/hapus_armada/{id}', [ArmadaController::class, 'hapus_armada'])->name('hapus_armada');
+
+    // Artikel
+    Route::get('/artikel-admin', [ArtikelController::class, 'index'])->name('artikel');
+    Route::post('/tambah_artikel', [ArtikelController::class, 'tambah_artikel'])->name('tambah_artikel');
+    Route::post('/ubah_artikel/{id}', [ArtikelController::class, 'ubah_artikel'])->name('ubah_artikel');
+    Route::delete('/hapus_artikel/{id}', [ArtikelController::class, 'hapus_artikel'])->name('hapus_artikel');
+
+    // Jenis Muatan
+    Route::get('/jenismuatan-admin', [JenisMuatanController::class, 'index'])->name('jenismuatan');
+    Route::post('/tambah_jenismuatan', [JenisMuatanController::class, 'tambah_jenismuatan'])->name('tambah_jenismuatan');
+    Route::post('/ubah_jenismuatan/{id}', [JenisMuatanController::class, 'ubah_jenismuatan'])->name('ubah_jenismuatan');
+    Route::delete('/hapus_jenismuatan/{id}', [JenisMuatanController::class, 'hapus_jenismuatan'])->name('hapus_jenismuatan');
 });

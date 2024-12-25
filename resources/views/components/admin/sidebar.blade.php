@@ -19,6 +19,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="/artikel-admin">
+            <i class="mdi mdi-text-box-check menu-icon"></i>
+          <span class="menu-title">Artikel</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="/iklan-admin">
             <i class="mdi mdi-advertisements menu-icon"></i>
           <span class="menu-title">Iklan</span>
@@ -28,6 +34,12 @@
         <a class="nav-link" href="/keunggulan-admin">
             <i class="mdi mdi-pan-up menu-icon"></i>
           <span class="menu-title">Keunggulan</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/jenismuatan-admin">
+            <i class="mdi mdi-zip-box menu-icon"></i>
+          <span class="menu-title">Jenis Muatan</span>
         </a>
       </li>
       <li class="nav-item">
