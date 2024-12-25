@@ -295,7 +295,7 @@
           <h1 class="mb-4">Armada Kurirmoo</h1>
         </div>
         <div class="col-lg-12">
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
 
             <!-- Pickup L300 Bak -->
             @foreach ($armada as $no => $valueArmada)
