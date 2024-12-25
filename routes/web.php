@@ -41,6 +41,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [LandingpageController::class, 'index'])->name('home');
 Route::get('/privacy-policy', [LandingpageController::class, 'privacyPolicy'])->name('privacyPolicy');
 Route::get('/syarat-ketentuan', [LandingpageController::class, 'syaratketentuan'])->name('syaratketentuan');
+// detail artikel
+Route::get('/artikel/{id}', [LandingpageController::class, 'detailArtikel'])->name('detailArtikel');
 
 
 // login

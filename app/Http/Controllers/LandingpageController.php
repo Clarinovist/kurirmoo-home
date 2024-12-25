@@ -41,12 +41,23 @@ class LandingpageController extends Controller
 
     public function privacyPolicy()
     {
+        $hero =  Hero::first();
         $kontak =  Kontak::first();
-        return view('landingpage.privacy_policy.privacy_policy')->with(['kontak' => $kontak]);
+        return view('landingpage.privacy_policy.privacy_policy')->with(['kontak' => $kontak, 'hero' => $hero]);
     }
     public function syaratKetentuan()
     {
+        $hero =  Hero::first();
         $kontak =  Kontak::first();
-        return view('landingpage.syarat_ketentuan.syarat_ketentuan')->with(['kontak' => $kontak]);
+        return view('landingpage.syarat_ketentuan.syarat_ketentuan')->with(['kontak' => $kontak, 'hero' => $hero]);
+    }
+
+    public function detailArtikel(request $request, $id)
+    {
+        $kontak =  Kontak::first();
+        $hero =  Hero::first();
+        $artikel =Artikel::where('id', $id)->first();
+        // dd($artikel);
+        return view('landingpage.artikel.detail_artikel')->with(['kontak' => $kontak, 'artikel' => $artikel, 'hero' => $hero]);
     }
 }
