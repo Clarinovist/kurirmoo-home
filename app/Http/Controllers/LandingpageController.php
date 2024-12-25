@@ -81,4 +81,17 @@ class LandingpageController extends Controller
         // dd($artikel);
         return view('landingpage.artikel.detail_artikel')->with(['kontak' => $kontak, 'artikel' => $artikel, 'hero' => $hero]);
     }
+
+    public function detailAboutus(request $request)
+    {
+        $kontak =  Kontak::first();
+        $hero =  Hero::first();
+        $about =  AboutUs::first();
+        Visitor::create([
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->header('User-Agent'),
+            'url' => $request->fullUrl(),
+        ]);
+        return view('landingpage.about_us.about_us')->with(['kontak' => $kontak, 'about' => $about, 'hero' => $hero]);
+    }
 }

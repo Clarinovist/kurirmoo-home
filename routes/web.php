@@ -43,6 +43,7 @@ Route::get('/privacy-policy', [LandingpageController::class, 'privacyPolicy'])->
 Route::get('/syarat-ketentuan', [LandingpageController::class, 'syaratketentuan'])->name('syaratketentuan');
 // detail artikel
 Route::get('/artikel/{id}', [LandingpageController::class, 'detailArtikel'])->name('detailArtikel');
+Route::get('/detail-about-us', [LandingpageController::class, 'detailAboutus'])->name('detailAboutus');
 
 
 // login

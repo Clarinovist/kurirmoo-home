@@ -5,11 +5,11 @@
         <div class="container pt-5">
             <div class="row g-5 pt-5">
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
-                    <h1 class="display-4 text-white mb-4 animated slideInRight">Artikel</h1>
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Tentang Kami</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
                             <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Artikel</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Tentang Kami</li>
                         </ol>
                     </nav>
                 </div>
@@ -24,15 +24,15 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Artikel</div>
-                <h1 class="mb-4">Artikel</h1>
+                <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">Tentang Kami</div>
+                <h1 class="mb-4">Tentang Kami</h1>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-9">
-                    <img class="img-fluid" src="{{ asset('storage/' . $artikel->gambar) }}" alt="" style="max-height: auto;">
+                    <img class="img-fluid" src="{{ asset('storage/' . $about->gambar) }}" alt="" style="max-height: auto;">
                 </div>
                 <div class="col-lg-9">
-                    <p class="mb-4">{!! $artikel->desc !!}</p>
+                    <p class="mb-4">{!! $about->desc !!}</p>
                 </div>
             </div>
         </div>

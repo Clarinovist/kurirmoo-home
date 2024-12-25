@@ -104,7 +104,7 @@
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
           <h5 class="text-white mb-4">Popular Link</h5>
-          <a class="btn btn-link" href="#about-us">About Us</a>
+          <a class="btn btn-link" href="/#about-us">About Us</a>
           <a class="btn btn-link" href="/privacy-policy" >Privacy Policy</a>
           <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
         </div>

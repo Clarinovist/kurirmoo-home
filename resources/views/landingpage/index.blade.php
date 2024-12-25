@@ -105,8 +105,10 @@
           <div class="btn btn-sm border rounded-pill text-danger px-3 mb-3">About Us</div>
           <h1 class="mb-4">{{ $about->judul }}</h1>
           <p class="mb-4">
-            {!! $about->desc !!}
+            {!! Str::substr($about->desc, 0, 400) !!} ...
+            {{-- {!! $about->desc !!} --}}
           </p>
+          <a class="btn btn-danger rounded-pill px-4 me-3 mb-5" href="/detail-about-us">Read More</a>
           <div class="row g-3">
             <div class="col-sm-6">
               <h6 class="mb-3"><i class="fa fa-check text-danger me-2"></i>Inovasi Berbasis Teknologi</h6>
@@ -118,11 +120,10 @@
             </div>
           </div>
           <div class="d-flex align-items-center mt-4">
-            <!-- <a class="btn btn-danger rounded-pill px-4 me-3" href="">Read More</a> -->
-            <a class="btn btn-outline-danger btn-square me-3" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-danger btn-square me-3" href="{{ $kontak->instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
             <a class="btn btn-outline-danger btn-square me-3" href="{{ $kontak->youtube }}" target="_blank"><i class="fab fa-youtube"></i></a>
             <a class="btn btn-outline-danger btn-square me-3" href="mailto:{{ $kontak->email }}"><i class="fa fa-envelope"></i></a>
-            <a class="btn btn-outline-danger btn-square " href="https://wa.me/{{ $kontak->no_wa }}"><i class="fab fa-whatsapp"></i></a>
+            <a class="btn btn-outline-danger btn-square " href="https://wa.me/{{ $kontak->no_hp }}"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
@@ -470,7 +471,7 @@
                 <br />
                 <br /> -->
               <!-- Google Play button -->
-              <a href="/" target="_blank" class="market-btn google-btn" role="button">
+              <a href="{{ $kontak->playstore }}" target="_blank" class="market-btn google-btn" role="button">
                 <span class="market-button-subtitle">Download on the</span>
                 <span class="market-button-title">Google Play</span>
               </a>
@@ -602,7 +603,7 @@
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
           <h5 class="text-white mb-4">Popular Link</h5>
-          <a class="btn btn-link" href="#about-us">About Us</a>
+          <a class="btn btn-link" href="/#about-us">About Us</a>
           <a class="btn btn-link" href="/privacy-policy" >Privacy Policy</a>
           <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
         </div>
