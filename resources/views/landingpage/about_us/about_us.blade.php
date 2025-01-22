@@ -66,7 +66,7 @@
               <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
             </div>
             <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-              <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.jpg')}}" alt="" width="600px" />
+              <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.png')}}" alt="" width="600px" />
             </div>
           </div>
         </div>

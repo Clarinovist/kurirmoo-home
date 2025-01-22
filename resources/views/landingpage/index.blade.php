@@ -456,7 +456,7 @@
     <div class="container">
       <div class="row g-5 align-items-center">
         <div class="col-md-6 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
-          <img class="img-fluid" src="{{ asset('assets_landingpage/img/car.png')}}" alt="" />
+          <img class="img-fluid" src="{{ asset('assets_landingpage/img/car.png')}}" alt="" width="900px"/>
         </div>
         <div class="col-md-6 py-5 wow fadeIn text-center" data-wow-delay="0.5s">
           <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Aplikasi</div>
@@ -608,7 +608,7 @@
           <a class="btn btn-link" href="/syarat-ketentuan" >Syarat dan Ketentuan</a>
         </div>
         <div class="col-md-4 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.jpg')}}" alt="" width="600px" />
+          <img class="img-fluid" src="{{ asset('assets_landingpage/img/logo-footer.png')}}" alt="" width="600px" />
         </div>
       </div>
     </div>
