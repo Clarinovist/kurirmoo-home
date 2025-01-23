@@ -310,11 +310,11 @@
                       {{-- <i class="fa fa-truck fa-3x"></i> --}}
                     </div>
                     <h3 class="mb-3 text-center">
-                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#Pickup">
+                      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#armada{{ $valueArmada->id }}">
                         {{ $valueArmada->nama }}
                       </button>
                     </h3>
-                    <div class="modal fade" id="Pickup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="armada{{ $valueArmada->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <div class="modal-header">
